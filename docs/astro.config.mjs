@@ -93,10 +93,12 @@ export default defineConfig({
 					],
 				},
 				{
-					label: 'Security',
+					label: 'Security & Legal',
 					items: [
 						'security/audits',
 						'security/partners',
+						'terms/terms-of-service',
+						'terms/privacy-policy',
 					],
 				},
 			],

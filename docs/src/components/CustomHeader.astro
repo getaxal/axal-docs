@@ -3,7 +3,7 @@ import config from 'virtual:starlight/user-config';
 
 import LanguageSelect from 'virtual:starlight/components/LanguageSelect';
 import SiteTitle from 'virtual:starlight/components/SiteTitle';
-import SocialIcons from 'virtual:starlight/components/SocialIcons';
+import SocialIcons from './CustomSocialIcons.astro';
 import ThemeSelect from 'virtual:starlight/components/ThemeSelect';
 import EarnNowButton from './EarnNowButton.astro';
 ---
@@ -14,6 +14,11 @@ import EarnNowButton from './EarnNowButton.astro';
 	</div>
 	<div class="sl-hidden md:sl-flex print:hidden right-group">
 		<div class="sl-flex social-icons">
+			<a href="mailto:hello@getaxal.com" class="sl-flex help-icon" aria-label="Help">
+				<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+					<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/>
+				</svg>
+			</a>
 			<SocialIcons />
 		</div>
 		<ThemeSelect />
@@ -54,6 +59,14 @@ import EarnNowButton from './EarnNowButton.astro';
 			content: '';
 			height: 2rem;
 			border-inline-end: 1px solid var(--sl-color-gray-5);
+		}
+		.help-icon {
+			color: var(--sl-color-white);
+			padding: 0.5em;
+			margin: -0.5em;
+		}
+		.help-icon:hover {
+			opacity: 0.66;
 		}
 
 		.mobile-earn-button {

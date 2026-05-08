@@ -73,8 +73,7 @@ export default defineConfig({
 					label: 'Getting started',
 					items: [
 						'getting-started/quick-start',
-						'getting-started/mobile',
-						'getting-started/depositing-crypto',
+							'getting-started/depositing-crypto',
 						'getting-started/depositing-with-card-bank',
 					],
 				},

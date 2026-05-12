@@ -23,6 +23,7 @@ export default defineConfig({
 			integrations: [
 			starlight({
 				title: 'Axal',
+				favicon: '/favicon.png',
 				logo: {
 					light: '/src/assets/axal-light.svg',
 					dark: '/src/assets/axal-dark.svg',
@@ -73,8 +74,10 @@ export default defineConfig({
 					label: 'Getting started',
 					items: [
 						'getting-started/quick-start',
-							'getting-started/depositing-crypto',
+						'getting-started/depositing-crypto',
 						'getting-started/depositing-with-card-bank',
+						'how-it-works/withdrawal',
+						'referrals/overview',
 					],
 				},
 				{
@@ -92,8 +95,6 @@ export default defineConfig({
 						'how-it-works/verified-signing',
 						'how-it-works/contracts',
 						'how-it-works/supported-chains',
-						'how-it-works/withdrawal',
-						'referrals/overview',
 					],
 				},
 				{

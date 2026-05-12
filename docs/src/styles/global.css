@@ -43,102 +43,122 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
+  /* Axal brand: warm cream background */
+  --background: #FAF8F4;
+  --foreground: #0f0f0e;
+  --card: #FBFAF6;
+  --card-foreground: #0f0f0e;
+  --popover: #FBFAF6;
+  --popover-foreground: #0f0f0e;
+  /* Axal brand: dark teal primary */
+  --primary: #264450;
+  --primary-foreground: #FAF8F4;
+  --secondary: #f0ece4;
+  --secondary-foreground: #0f0f0e;
+  --muted: #f0ece4;
+  --muted-foreground: #47574D;
+  /* Axal brand: sage mint accent */
+  --accent: #DEF2CC;
+  --accent-foreground: #264450;
   --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --border: #e8e4dc;
+  --input: #e8e4dc;
+  --ring: #264450;
+  --chart-1: #e8753a;
+  --chart-2: #729960;
+  --chart-3: #264450;
+  --chart-4: #5376A6;
+  --chart-5: #d16a4c;
+  --sidebar: #FBFAF6;
+  --sidebar-foreground: #0f0f0e;
+  --sidebar-primary: #264450;
+  --sidebar-primary-foreground: #FAF8F4;
+  --sidebar-accent: #DEF2CC;
+  --sidebar-accent-foreground: #264450;
+  --sidebar-border: #e8e4dc;
+  --sidebar-ring: #264450;
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
+  /* Axal brand: near-black dark mode */
+  --background: #0f0f0e;
+  --foreground: #FAF8F4;
+  --card: #141412;
+  --card-foreground: #FAF8F4;
+  --popover: #141412;
+  --popover-foreground: #FAF8F4;
+  --primary: #DEF2CC;
+  --primary-foreground: #0f0f0e;
+  --secondary: #1e3640;
+  --secondary-foreground: #FAF8F4;
+  --muted: #1e3640;
+  --muted-foreground: #B9C9E1;
+  --accent: #1e3640;
+  --accent-foreground: #DEF2CC;
   --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  --border: rgba(255,255,255,0.1);
+  --input: rgba(255,255,255,0.15);
+  --ring: #DEF2CC;
+  --chart-1: #e8753a;
+  --chart-2: #729960;
+  --chart-3: #DEF2CC;
+  --chart-4: #5376A6;
+  --chart-5: #d16a4c;
+  --sidebar: #141412;
+  --sidebar-foreground: #FAF8F4;
+  --sidebar-primary: #DEF2CC;
+  --sidebar-primary-foreground: #0f0f0e;
+  --sidebar-accent: #1e3640;
+  --sidebar-accent-foreground: #DEF2CC;
+  --sidebar-border: rgba(255,255,255,0.1);
+  --sidebar-ring: #DEF2CC;
 }
 
-/* Custom sage mint color overrides */
+/* Axal brand color overrides */
 :root {
-  /* Override Tailwind accent colors */
+  /* Starlight page chrome — warm cream background */
+  --sl-color-bg: #FAF8F4 !important;
+  --sl-color-bg-nav: #FBFAF6 !important;
+  --sl-color-bg-sidebar: #FBFAF6 !important;
+  --sl-color-hairline: #e8e4dc !important;
+  --sl-color-hairline-light: #f0ece4 !important;
+  --sl-color-hairline-shade: #e0dbd2 !important;
+
+  /* Starlight text */
+  --sl-color-text: #0f0f0e !important;
+  --sl-color-text-invert: #FAF8F4 !important;
+
+  /* Starlight accent — dark teal for links/highlights */
+  --sl-color-accent: #264450 !important;
+  --sl-color-accent-high: #1a2f37 !important;
+  --sl-color-accent-low: #DEF2CC !important;
+  --sl-color-bg-accent: #264450 !important;
+  --sl-color-text-accent: #264450 !important;
+
+  /* Tailwind accent scale — sage mint */
   --color-accent-50: #f7fdf4;
   --color-accent-100: #eefbe8;
-  --color-accent-200: #def2cc;
+  --color-accent-200: #DEF2CC;
   --color-accent-300: #c8e8a8;
   --color-accent-400: #a8d87a;
-  --color-accent-500: #8ac84d;
-  --color-accent-600: #6ba83a;
-  --color-accent-700: #54852e;
-  --color-accent-800: #456a28;
-  --color-accent-900: #3b5724;
-  --color-accent-950: #1e2f12;
-  
-  /* Override Starlight accent colors */
-  --sl-color-accent: #DEF2CC !important;
-  --sl-color-accent-high: #DEF2CC !important;
-  --sl-color-accent-low: #DEF2CC !important;
-  --sl-color-bg-accent: #DEF2CC !important;
-  --sl-color-text-accent: #DEF2CC !important;
+  --color-accent-500: #729960;
+  --color-accent-600: #47574D;
+  --color-accent-700: #264450;
+  --color-accent-800: #1e3640;
+  --color-accent-900: #1a2f37;
+  --color-accent-950: #0f1e25;
 }
 
 :root[data-theme='light'] {
-  --sl-color-accent: #DEF2CC !important;
-  --sl-color-accent-high: #DEF2CC !important;
+  --sl-color-bg: #FAF8F4 !important;
+  --sl-color-bg-nav: #FBFAF6 !important;
+  --sl-color-bg-sidebar: #FBFAF6 !important;
+  --sl-color-text: #0f0f0e !important;
+  --sl-color-accent: #264450 !important;
+  --sl-color-accent-high: #1a2f37 !important;
   --sl-color-accent-low: #DEF2CC !important;
-  --sl-color-bg-accent: #DEF2CC !important;
-  --sl-color-text-accent: #DEF2CC !important;
+  --sl-color-bg-accent: #264450 !important;
+  --sl-color-text-accent: #264450 !important;
 }
 
 /* Make markdown headings smaller in content area */
@@ -159,28 +179,34 @@
 }
 
 :root[data-theme='dark'] {
+  --sl-color-bg: #0f0f0e !important;
+  --sl-color-bg-nav: #141412 !important;
+  --sl-color-bg-sidebar: #141412 !important;
+  --sl-color-hairline: rgba(255,255,255,0.1) !important;
+  --sl-color-text: #FAF8F4 !important;
   --sl-color-accent: #DEF2CC !important;
   --sl-color-accent-high: #DEF2CC !important;
-  --sl-color-accent-low: #DEF2CC !important;
-  --sl-color-bg-accent: #DEF2CC !important;
+  --sl-color-accent-low: #1e3640 !important;
+  --sl-color-bg-accent: #1e3640 !important;
   --sl-color-text-accent: #DEF2CC !important;
 }
 
-/* Override the purple gradient background */
+/* Hero gradient — Axal warm cream + teal */
 [data-has-hero] .page {
-  background: linear-gradient(215deg, #DEF2CC, transparent 40%),
-    radial-gradient(#DEF2CC, transparent 40%) no-repeat -60vw -40vh / 105vw 200vh,
-    radial-gradient(#DEF2CC, transparent 65%) no-repeat 50% calc(100% + 20rem) / 60rem 30rem !important;
+  background: linear-gradient(215deg, rgba(222,242,204,0.4), transparent 40%),
+    radial-gradient(rgba(38,68,80,0.08), transparent 40%) no-repeat -60vw -40vh / 105vw 200vh,
+    radial-gradient(rgba(222,242,204,0.25), transparent 65%) no-repeat 50% calc(100% + 20rem) / 60rem 30rem !important;
 }
 
-/* Override purple overlay */
+/* Override Starlight's purple overlay variable */
 :root {
-  --purple-hsl: 120, 60%, 85% !important;
-  --overlay-blurple: hsla(120, 60%, 85%, 0.2) !important;
+  --purple-hsl: 160, 35%, 55% !important;
+  --overlay-blurple: hsla(160, 35%, 55%, 0.12) !important;
 }
 
 :root[data-theme='light'] {
-  --purple-hsl: 120, 60%, 85% !important;
+  --purple-hsl: 160, 35%, 55% !important;
+  --overlay-blurple: hsla(160, 35%, 55%, 0.12) !important;
 }
 
 
@@ -287,7 +313,7 @@ h1, h2, h3, h4, h5, h6,
   margin: 0.375rem 0 !important;
 }
 
-/* Deep blue, underlined links sitewide */
+/* Axal brand links — dark teal, underlined, orange on hover */
 a, a:visited {
   color: #264450 !important;
   text-decoration: underline !important;
@@ -295,7 +321,7 @@ a, a:visited {
 }
 
 a:hover, a:focus {
-  color: #264450 !important;
+  color: #e8753a !important;
 }
 
 /* Mobile menu backdrop overlay */

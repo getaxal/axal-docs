@@ -1,18 +1,67 @@
-:root {
-	--purple-hsl: 255, 60%, 60%;
-	--overlay-blurple: hsla(var(--purple-hsl), 0.2);
-}
-
+/* =============================================
+   Axal brand: light mode
+   ============================================= */
+:root,
 :root[data-theme='light'] {
-	--purple-hsl: 255, 85%, 65%;
+	/* Page backgrounds — warm cream */
+	--sl-color-bg:         #FAF8F4;
+	--sl-color-bg-nav:     #FBFAF6;
+	--sl-color-bg-sidebar: #FBFAF6;
+
+	/* Borders */
+	--sl-color-hairline:       #e8e4dc;
+	--sl-color-hairline-light: #f0ece4;
+	--sl-color-hairline-shade: #e0dbd2;
+
+	/* Text */
+	--sl-color-text:        #0f0f0e;
+	--sl-color-text-invert: #FAF8F4;
+
+	/* Accent — steel blue */
+	--sl-color-accent:      #5376A6;
+	--sl-color-accent-high: #3d5a8a;
+	--sl-color-accent-low:  #B9C9E1;
+	--sl-color-bg-accent:   #5376A6;
+	--sl-color-text-accent: #5376A6;
+
+	/* Hero overlay */
+	--purple-hsl:      214, 34%, 49%;
+	--overlay-blurple: hsla(214, 34%, 49%, 0.12);
 }
 
+/* =============================================
+   Axal brand: dark mode
+   ============================================= */
+:root[data-theme='dark'] {
+	--sl-color-bg:         #0f0f0e;
+	--sl-color-bg-nav:     #141412;
+	--sl-color-bg-sidebar: #141412;
+
+	--sl-color-hairline:       rgba(255,255,255,0.1);
+	--sl-color-hairline-light: rgba(255,255,255,0.06);
+	--sl-color-hairline-shade: rgba(255,255,255,0.14);
+
+	--sl-color-text:        #FAF8F4;
+	--sl-color-text-invert: #0f0f0e;
+
+	--sl-color-accent:      #B9C9E1;
+	--sl-color-accent-high: #B9C9E1;
+	--sl-color-accent-low:  #1e2e40;
+	--sl-color-bg-accent:   #1e2e40;
+	--sl-color-text-accent: #B9C9E1;
+
+	--purple-hsl:      214, 34%, 49%;
+	--overlay-blurple: hsla(214, 34%, 49%, 0.08);
+}
+
+/* =============================================
+   Hero page gradient
+   ============================================= */
 [data-has-hero] .page {
 	background:
-		linear-gradient(215deg, var(--overlay-blurple), transparent 40%),
-		radial-gradient(var(--overlay-blurple), transparent 40%) no-repeat -60vw -40vh / 105vw 200vh,
-		radial-gradient(var(--overlay-blurple), transparent 65%) no-repeat 50% calc(100% + 20rem) /
-			60rem 30rem;
+		linear-gradient(215deg, rgba(185,201,225,0.35), transparent 40%),
+		radial-gradient(rgba(83,118,166,0.06), transparent 40%) no-repeat -60vw -40vh / 105vw 200vh,
+		radial-gradient(rgba(185,201,225,0.2), transparent 65%) no-repeat 50% calc(100% + 20rem) / 60rem 30rem;
 }
 
 [data-has-hero] header {
@@ -23,5 +72,48 @@
 }
 
 [data-has-hero] .hero > img {
-	filter: drop-shadow(0 0 3rem var(--overlay-blurple));
+	filter: drop-shadow(0 0 3rem rgba(185,201,225,0.5));
+}
+
+/* =============================================
+   Links — steel blue, orange on hover
+   ============================================= */
+a,
+a:visited {
+	color: #5376A6;
+	text-decoration: underline;
+	text-underline-offset: 2px;
+}
+
+a:hover,
+a:focus {
+	color: #e8753a;
+}
+
+/* =============================================
+   Sidebar active state
+   ============================================= */
+.sidebar-pane a[aria-current='page'],
+.sidebar-pane a[aria-current='page']:hover,
+.sidebar-pane a[aria-current='page']:focus {
+	background-color: #B9C9E1;
+	color: #3d5a8a;
+	font-weight: 600;
+}
+
+.sidebar-pane a:hover,
+.sidebar-pane a:focus {
+	background-color: rgba(185, 201, 225, 0.3);
+	color: #5376A6;
+}
+
+[data-theme='dark'] .sidebar-pane a[aria-current='page'],
+[data-theme='dark'] .sidebar-pane a[aria-current='page']:hover {
+	background-color: rgba(185,201,225,0.2);
+	color: #B9C9E1;
+}
+
+[data-theme='dark'] .sidebar-pane a:hover {
+	background-color: rgba(185,201,225,0.08);
+	color: #B9C9E1;
 }

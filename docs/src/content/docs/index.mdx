@@ -1,56 +1,13 @@
 ---
-title: Axal 🚀 
-head:
-  - tag: title
-    content: Axal 🚀
-  - tag: script
-    content: |
-      window.location.href = '/getting-started/quick-start/';
-description: Axal helps you get the best yield from your crypto investments.
+title: Axal
+description: The World's Best Wealth App. Axal puts your money to work across proven assets.
 template: splash
 editUrl: false
 lastUpdated: false
-banner:
-  content: |
-    Axal streamlines earning yield on digital assets.
-    <a href="https://www.getaxal.com">
-      Learn More
-    </a>
 hero:
-  title: Earn More.
-  tagline: Axal is a non-custodial, automated stablecoin savings account offering 6–10% APY by optimizing your capital across top-tier DeFi protocols. Built on Privy smart wallets, it ensures you retain full control of your crypto at all times. Axal prioritizes security with a Trusted Execution Environment that filters every transaction for added protection. Axal is chain and gas abstracted, meaning no crypto experience is necessary.
-  image:
-    file: ~/assets/axal-light.svg
-  actions:
-    - text: Launch
-      icon: external
-      link: https://www.getaxal.com
-    - text: View Docs
-      icon: right-arrow
-      variant: minimal
-      link: /getting-started/quick-start/
+  title: ''
 ---
 
-import { CardGrid, Card } from '@astrojs/starlight/components';
-import AboutAstro from '~/components/about-astro.astro';
-import TestimonialGrid from '~/components/testimonial-grid.astro';
-import Testimonial from '~/components/testimonial.astro';
+import LandingHero from '~/components/LandingHero.astro';
 
-<CardGrid stagger>
-	<Card title="6–10% APY, Automatically" icon="star">
-		We move your capital to the highest-yielding protocols so you don't have to.
-	</Card>
-	<Card title="Security First" icon="setting">
-		All transactions are filtered through a Trusted Execution Environment for your protection.
-	</Card>
-	<Card title="Tier-1 Protocols Only" icon="random">
-		We only touch the most battle-tested DeFi lending platforms.
-	</Card>
-	<Card title="Non-Custodial by Default" icon="external">
-		Powered by Privy smart wallets — your crypto, your control.
-	</Card>
-</CardGrid>
-
-
-
-<AboutAstro title="Brought to you by" theme="dark" />
+<LandingHero />

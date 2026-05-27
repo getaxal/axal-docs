@@ -31,6 +31,7 @@ export default defineConfig({
 				},
 				components: {
 					Header: './src/components/CustomHeader.astro',
+					Hero: './src/components/EmptyHero.astro',
 					MobileMenuFooter: './src/components/CustomMobileMenuFooter.astro',
 					PageTitle: './src/components/CustomPageTitle.astro',
 					Sidebar: './src/components/CustomSidebar.astro',
@@ -76,6 +77,7 @@ export default defineConfig({
 						'getting-started/quick-start',
 						'getting-started/depositing-crypto',
 						'getting-started/depositing-with-card-bank',
+						'getting-started/depositing-from-app',
 						'how-it-works/withdrawal',
 						'referrals/overview',
 					],
@@ -83,9 +85,9 @@ export default defineConfig({
 				{
 					label: 'Start Earning',
 					items: [
-						'how-it-works/tracking-your-portfolio',
-						'how-it-works/optimizing-portfolio',
-						'how-it-works/strategies',
+						{ label: 'Overview', link: 'how-it-works/tracking-your-portfolio' },
+						{ label: 'USD', link: 'how-it-works/optimizing-portfolio' },
+						{ label: 'Bitcoin', link: 'how-it-works/strategies' },
 					],
 				},
 				{

@@ -88,6 +88,7 @@ export default defineConfig({
 						{ label: 'Overview', link: 'how-it-works/tracking-your-portfolio' },
 						{ label: 'USD', link: 'how-it-works/optimizing-portfolio' },
 						{ label: 'Bitcoin', link: 'how-it-works/strategies' },
+							{ label: 'Gold', link: 'how-it-works/gold' },
 					],
 				},
 				{

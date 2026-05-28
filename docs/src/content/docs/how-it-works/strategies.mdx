@@ -1,116 +1,36 @@
 ---
-title: "Strategies and Earnings"
-description: "Learn about Axal's automated stablecoin savings strategies and how earnings are generated"
-tags: ["How it Works", "Strategies", "Earnings", "DeFi"]
+title: "Bitcoin"
+description: "Track your BTC balance and earnings, and start earning yield on idle funds"
+tags: ["Bitcoin", "BTC", "Yield", "Earnings", "Balance"]
 ---
 
-Axal offers automated stablecoin savings with 6-10% APY through strategic allocation across battle-tested DeFi protocols. Our approach focuses on safety, diversification, and automated optimization.
+The Bitcoin tab shows a complete view of your BTC balance and how it is performing. Here you can see your idle BTC, your yield-earning BTC, and your total earnings to date. You can toggle between a BTC and USD display using the **$ USD** button in the top right.
 
-Not all pools are created equal. Before any pool qualifies for allocation, we look at a core set of factors that are designed to tilt toward quality and resilience.
+<img src="/Start%20Earning/btc%20balance%20and%20earning.png" alt="BTC balance and earnings" style="width: 40%;" />
 
-## Smart pool selection
+## Your BTC Accounts
 
-- **Risk**: How safe is the pool and how are risks mitigated
-- **Capital size**: Is there enough liquidity to support allocations without bottlenecks
-- **Collateral type**: What assets back the pool and how stable are they
-- **Reputation**: Has the protocol proven reliable and secure over time
+- **BTC Balance** — the portion of your BTC sitting idle and not yet earning yield
+- **BTC Yield account** — your BTC actively deployed into a yield strategy, shown with its current APY
 
-Only pools that check these boxes make the cut.
+## Start Earning
 
-## Strategy construction
+If you have an idle BTC balance, tap **Start earning →** to move it into a yield position. Your funds will begin generating yield immediately once allocated.
 
-We combine vetted pools into diversified strategy sets so no single position dominates your outcome. As market conditions evolve, new pools can be added and outdated ones retired, while overall risk remains balanced.
+## Key Metrics
 
-## Ongoing monitoring
+- **APY** — your current earning rate on deposited BTC, updated in real time
+- **Total Earnings** — the cumulative amount you have earned since depositing
+- **Earned today** — the amount earned in the current day, updated throughout the day
 
-- Track realized and projected yield
-- Watch liquidity depth and utilization
-- Monitor risk signals and protocol updates
-- Attribute returns so you understand where yield is coming from
+## Your Holdings
 
-## Current Protocols & Networks
+The Holdings bar at the bottom shows how your BTC is distributed across the underlying yield strategies. Tap **Learn more** to see a full breakdown.
 
-![Current protocols and networks](/Quick_Start%20(image)/Screen%20Shot%202025-09-09%20at%201.39.32%20AM.png)
+## The lowest fees to buy Bitcoin
 
-| Name | Type | % Allocation |
-|------|------|--------------|
-| Morpho Gauntlet USDC Vault | Vault | 30% |
-| Morpho Seamless USDC Vault | Vault | 20% |
-| Morpho Moonwell USDC Vault | Vault | 20% |
-| Spark USDC Vault | Vault | 15% |
-| YO USDC Vault | Vault | 15% |
+Buying Bitcoin anywhere else means paying exchange fees, spread markups, or conversion costs that eat into your position before you've earned a single satoshi. Axal offers some of the lowest all-in fees to purchase Bitcoin, so more of your money goes into BTC, not into someone else's pocket.
 
-We are constantly updating pools and strategies to maximize your yield.
+<img src="/bitcoin-fees.png" alt="Axal vs competitors: Bitcoin purchase fees" style="width: 100%; border-radius: 12px; margin: 1rem 0;" />
 
-- **Strategy Categories**
-  - **No Principal Asset Risk**: Because all the loans made on these strategies are liquidity pools, meaning that all the loans are actually over-collateralized. So there is no financial principal asset risk for the money you put in. Existing risks to your fund are listed below in "Primary Risks".
-
-- **Security & Transparency**
-  - Trusted Execution Environment: All transactions filtered for protection
-  - Non-Custodial: Powered by Privy smart wallets
-  - Chain & Gas Abstracted: No crypto experience necessary
-  - Real-time Monitoring: 24/7 position management
-  - Transparent Reporting: All vault addresses publicly viewable
-
-- **What happens with your deposit?**: USDC or blue‑chip collateral is supplied using algorithmically optimized weightings to lending protocols. Interest plus liquidity‑mining incentives (if any) are auto‑compounded.
-
-- **Primary Risks**
-  - Smart‑contract or oracle failure on lending protocols such as Morpho, Euler, etc.
-  - USDC de‑peg.
-
-- **Benefits**
-  - Automatic Optimization: Axal automatically allocates your funds across the best-yielding protocols
-  - Real-Time Updates: Your dashboard updates with live performance data
-  - Compound Earnings: Your yield is automatically reinvested to maximize returns
-  - No Lock-ups: Withdraw your funds anytime with no penalties
-
-### How Liquidity Provider (LP) Fees Generate Yield
-
-Providing liquidity means depositing assets into an automated market maker (AMM) pool (e.g., a USDC/ETH or stablecoin/stablecoin pair). Traders swap against the pool and pay a small fee on each trade. Those fees are distributed pro‑rata to liquidity providers (LPs), including Axal's vault.
-
-#### Where the fees come from
-
-- Every swap in the pool incurs a fee (commonly 0.01%–0.3%, depending on the pool).
-- Fees are automatically retained by the pool and added to the pool's assets.
-- As an LP, your share of the pool increases in value as fees accrue.
-
-#### Flow of funds (at a high level)
-
-1. Vault allocates a portion of deposits to selected, audited AMM pools.
-2. Users trade against those pools and pay swap fees.
-3. Fees accumulate in the pool and increase the total pool value.
-4. Your vault shares track that value; the vault periodically compounds fees and rebalances.
-
-#### Example calculation
-
-- Suppose a USDC/USDT pool charges a 0.01% fee and handles $100,000,000 in daily volume.
-- Daily fees = $100,000,000 × 0.01% = $10,000.
-- If Axal's position represents 2% of pool liquidity, the pro‑rata share of fees is ~$200/day before compounding and rebalancing.
-- Actual returns depend on volume, fee tier, pool depth, and time‑in‑market.
-
-#### Managing LP risks
-
-- **Impermanent loss**: In volatile pairs, relative price moves can reduce LP value versus holding. Axal focuses on stable/stable or closely‑pegged pairs to minimize this.
-- **Smart‑contract risk**: We use audited protocols and TEEs for signing, and we diversify across pools.
-- **Concentrated liquidity risk**: In CLMMs (e.g., Uniswap v3‑style), liquidity must be positioned in an active price range; Axal monitors and repositions programmatically.
-
-### Why LP fees complement lending yield
-
-LP fees are driven by trading activity, while lending yields are driven by borrowing demand. Combining the two creates diversified, uncorrelated sources of return. Our optimizer continuously evaluates both to improve risk‑adjusted yield.
-
-### Withdrawal Availability & Notifications
-
-Some protocols include brief exit queues or withdrawal windows (e.g., epoch‑based redemptions or settlement periods). When part of your balance sits in a non‑instant protocol:
-
-- We display a clear status in your dashboard and show which portion is queued for withdrawal.
-- You receive a notification with an estimated number of days until funds are available.
-- During the waiting period, your position continues to accrue any eligible yield per protocol rules; we show an estimate of earnings until the expected release date.
-- As soon as the window opens and funds settle, we convert them to Uninvested Cash or proceed with your transfer based on your selection.
-
-### Portfolio Metrics Explained
-
-- Total Value: The total worth of your portfolio at any given time, including your deposits and returns. This is like checking the balance in your savings account, which shows both what you deposited and the interest you have earned so far.
-
-- APY (Annual Percentage Yield): The projected yearly return on your funds, including the effect of compounding. It tells you how much your money could grow over a year if left in the account. This is the same as the interest rate your bank advertises for a savings account, except Axal's APY is actively optimized to be higher.
-
-- Total Earnings: The cumulative amount of returns your portfolio has generated since you first deposited. This is like looking at the total interest your savings account has paid you over time, separate from your original deposits.
+Traditional exchanges and brokerage apps typically charge 1–3% per transaction. Some platforms hide fees inside a spread, so you never see what you're actually paying. Axal keeps fees transparent and low, and once you hold BTC, your balance immediately becomes eligible to earn yield — something no exchange or ETF can offer.

@@ -76,6 +76,56 @@
 }
 
 /* =============================================
+   Splash / landing page — strip all layout constraints
+   ============================================= */
+
+[data-has-hero] .main-frame {
+	padding: 0 !important;
+	padding-top: var(--sl-nav-height) !important;
+}
+[data-has-hero] .content-panel {
+	padding: 0 !important;
+	border: none !important;
+}
+[data-has-hero] .sl-container {
+	max-width: 100% !important;
+	width: 100% !important;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+[data-has-hero] .sl-markdown-content {
+	padding: 0 !important;
+	margin: 0 !important;
+}
+[data-has-hero] .main-pane {
+	width: 100% !important;
+	max-width: 100% !important;
+	padding: 0 !important;
+}
+[data-has-hero] main {
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+/* Hide the right-sidebar (ToC) on the landing page */
+[data-has-hero] .right-sidebar-container {
+	display: none !important;
+}
+
+/* Make the two-column wrapper non-flex so main-pane fills full width */
+[data-has-hero] .lg\:sl-flex {
+	display: block !important;
+}
+
+/* Nav bar: solid, no blur */
+[data-has-hero] header {
+	border-bottom: 1px solid var(--sl-color-hairline-shade) !important;
+	background-color: var(--sl-color-bg-nav) !important;
+	-webkit-backdrop-filter: none !important;
+	backdrop-filter: none !important;
+}
+
+/* =============================================
    Links — steel blue, orange on hover
    ============================================= */
 a,

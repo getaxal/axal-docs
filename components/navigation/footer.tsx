@@ -23,7 +23,7 @@ export function Footer() {
           <Link
             aria-label="Rubix Studios"
             className="font-semibold"
-            href="https://rubixstudios.com.au"
+            href="https://axal.com/"
             target="_blank"
             title="Rubix Studios"
           >

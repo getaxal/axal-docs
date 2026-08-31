@@ -13,7 +13,7 @@ export const imagealt = 'Rubix Studios Documentation'
 export const twitterhandle = '@RubixStudios'
 
 export const companyname = 'Rubix Studios'
-export const companylink = 'https://rubixstudios.com.au'
+export const companylink = 'https://axal.com/'
 
 export const branding = true
 export const rightsidebar = true

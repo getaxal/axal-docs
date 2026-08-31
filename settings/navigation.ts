@@ -6,8 +6,8 @@ export const Navigations = [
     href: `/docs${PageRoutes[0].href}`,
   },
   {
-    title: 'Rubix',
-    href: 'https://rubixstudios.com.au',
+    title: 'Axal',
+    href: 'https://axal.com/',
     external: true,
   },
 ]

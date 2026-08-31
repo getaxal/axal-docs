@@ -1,9 +1,11 @@
 'use client'
 
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { LuArrowUpRight, LuGithub } from 'react-icons/lu'
 
 import { Anchor } from '@/components/anchor'
+import { HomeNavbar } from '@/components/home/home-navbar'
 import { Logo } from '@/components/navigation/logo'
 import { Search } from '@/components/navigation/search'
 import { SheetLeft } from '@/components/sidebar'
@@ -13,6 +15,12 @@ import { ModeToggle } from '@/components/ui/theme-toggle'
 import { GitHubLink, Navigations } from '@/settings/navigation'
 
 export function Navbar() {
+  const pathname = usePathname()
+
+  if (pathname === '/') {
+    return <HomeNavbar />
+  }
+
   return (
     <nav className="bg-opacity-5 sticky top-0 z-50 mx-auto flex h-16 w-full items-center justify-between border-b p-1 px-2 backdrop-blur-xl backdrop-filter sm:p-3 md:gap-2 md:px-4">
       <div className="flex items-center gap-5">

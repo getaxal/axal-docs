@@ -25,7 +25,12 @@ interface Document {
   title?: string
 }
 
-export function Search() {
+interface SearchProps {
+  variant?: 'compact' | 'hero'
+  placeholder?: string
+}
+
+export function Search({ variant = 'compact', placeholder = 'Search' }: SearchProps) {
   const [searchedInput, setSearchedInput] = useState('')
   const [isOpen, setIsOpen] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
@@ -113,14 +118,26 @@ export function Search() {
       open={isOpen}
     >
       <DialogTrigger asChild>
-        <div className="relative max-w-md flex-1 cursor-pointer">
-          <LuSearch className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-neutral-500 dark:text-neutral-400" />
-          <Input
-            className="h-9 w-full rounded-md border bg-background pr-4 pl-10 text-sm shadow md:w-full"
-            placeholder="Search"
-            type="search"
-          />
-        </div>
+        {variant === 'hero' ? (
+          <div className="relative w-full max-w-md cursor-pointer">
+            <LuSearch className="absolute top-1/2 left-5 h-4.5 w-4.5 -translate-y-1/2 text-accent" />
+            <Input
+              className="h-13 w-full rounded-full border-border bg-surface pr-5 pl-12 text-[15px] shadow-sm"
+              placeholder={placeholder}
+              readOnly
+              type="search"
+            />
+          </div>
+        ) : (
+          <div className="relative max-w-md flex-1 cursor-pointer">
+            <LuSearch className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-neutral-500 dark:text-neutral-400" />
+            <Input
+              className="h-9 w-full rounded-md border bg-background pr-4 pl-10 text-sm shadow md:w-full"
+              placeholder="Search"
+              type="search"
+            />
+          </div>
+        )}
       </DialogTrigger>
 
       <DialogContent className="top-[45%] max-w-xs p-0 sm:top-[38%] sm:max-w-lg">

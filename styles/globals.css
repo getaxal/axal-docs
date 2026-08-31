@@ -6,15 +6,15 @@
 
 :root {
   /* Axal design tokens */
-  --bg: #faf8f4;
+  --bg: #fbfbfa;
   --surface: #ffffff;
-  --surface-soft: #eff4ed;
-  --ink: #1a201c;
-  --stone: #6b716a;
-  --border: #e4e1d8;
-  --accent: #69b247; /* pop color — buttons, links, icons, small highlights */
-  --accent-deep: #4a7c59; /* deeper green — larger fills, hover states */
-  --accent-soft: #e4ede6;
+  --surface-soft: #f2f3ef;
+  --ink: #16181a;
+  --stone: #6c706c;
+  --border: #e2e4df;
+  --accent: #69b247; /* primary — links, buttons, search icon, chart highlights, badges */
+  --accent-deep: #4a7c59; /* secondary — used sparingly */
+  --accent-soft: #e7f2e0;
   --cream: #f3f0e8;
 
   /* shadcn/template semantic tokens, remapped onto the tokens above */

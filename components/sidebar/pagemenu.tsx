@@ -9,7 +9,7 @@ import { Routes } from '@/lib/pageroutes'
 export function PageMenu({ isSheet = false }) {
   const path = usePathname()
 
-  if (!path.startsWith('/docs')) return null
+  if (!path.startsWith('/docs') && path !== '/') return null
 
   return (
     <div className="flex flex-col gap-3.5 pb-6">

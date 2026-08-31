@@ -4,6 +4,10 @@
 
 @custom-variant dark (&:is(.dark *));
 
+html {
+  scrollbar-gutter: stable;
+}
+
 :root {
   /* Axal design tokens */
   --bg: #fbfbfa;

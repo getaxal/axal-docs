@@ -5,26 +5,39 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
+  /* Axal design tokens */
+  --bg: #faf8f4;
+  --surface: #ffffff;
+  --surface-soft: #eff4ed;
+  --ink: #1a201c;
+  --stone: #6b716a;
+  --border: #e4e1d8;
+  --accent: #69b247; /* pop color — buttons, links, icons, small highlights */
+  --accent-deep: #4a7c59; /* deeper green — larger fills, hover states */
+  --accent-soft: #e4ede6;
+  --cream: #f3f0e8;
+
+  /* shadcn/template semantic tokens, remapped onto the tokens above */
+  --background: var(--bg);
+  --foreground: var(--ink);
+  --card: var(--surface);
+  --card-foreground: var(--ink);
+  --popover: var(--surface);
+  --popover-foreground: var(--ink);
+  --primary: var(--accent-deep);
+  --primary-foreground: var(--surface);
+  --secondary: var(--surface-soft);
+  --secondary-foreground: var(--ink);
+  --muted: var(--cream);
+  --muted-foreground: var(--stone);
+  --accent-foreground: var(--ink);
   --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
+  --destructive-foreground: oklch(1 0 0);
+  --input: var(--surface);
+  --ring: var(--accent);
   --radius: 0.625rem;
+  --radius-card: 16px;
+  --radius-pill: 9999px;
 }
 
 .dark {
@@ -50,6 +63,15 @@
 }
 
 @theme inline {
+  --font-sans: var(--font-season-sans), Arial, Helvetica, sans-serif;
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-soft: var(--surface-soft);
+  --color-ink: var(--ink);
+  --color-stone: var(--stone);
+  --color-accent-deep: var(--accent-deep);
+  --color-accent-soft: var(--accent-soft);
+  --color-cream: var(--cream);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -73,6 +95,8 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --radius-card: var(--radius-card);
+  --radius-pill: var(--radius-pill);
 }
 
 @layer base {
@@ -81,14 +105,29 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+    font-family: var(--font-season-sans), Arial, Helvetica, sans-serif;
+    font-weight: 500;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-season-sans), Arial, Helvetica, sans-serif;
+    font-weight: 600;
   }
 }
 
 .typography {
-  @apply prose prose-zinc prose-headings:scroll-m-20 prose-code:rounded-md prose-code:p-1 prose-code:leading-6 prose-code:before:content-none prose-code:after:content-none prose-pre:border prose-pre:bg-neutral-100 prose-img:rounded-md prose-img:border;
-  @apply w-[85vw] min-w-full! pt-2 text-sm sm:mx-auto sm:w-full prose-code:text-xs;
+  @apply prose prose-zinc prose-headings:scroll-m-20 prose-headings:font-semibold prose-code:rounded-md prose-code:p-1 prose-code:leading-6 prose-code:before:content-none prose-code:after:content-none prose-pre:border prose-pre:bg-neutral-100 prose-img:rounded-md prose-img:border;
+  @apply w-full max-w-none pt-2 text-sm prose-code:text-xs;
   @apply dark:prose-invert prose-code:text-neutral-800 dark:prose-code:bg-neutral-900 dark:prose-code:text-white dark:prose-pre:bg-neutral-900;
+}
+
+.typography img {
+  max-width: 100%;
+  height: auto;
 }
 
 .prose {

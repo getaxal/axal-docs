@@ -1,3 +1,5 @@
+import { type IconType } from 'react-icons'
+
 import { Documents } from '@/settings/documents'
 
 export type Paths =
@@ -6,6 +8,7 @@ export type Paths =
       href: string
       noLink?: true
       heading?: string
+      icon?: IconType
       items?: Paths[]
     }
   | {

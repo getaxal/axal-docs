@@ -1,9 +1,20 @@
+import {
+  LuGift,
+  LuRocket,
+  LuScale,
+  LuSettings2,
+  LuShieldCheck,
+  LuTrendingUp,
+  LuWalletMinimal,
+} from 'react-icons/lu'
+
 import { type Paths } from '@/lib/pageroutes'
 
 export const Documents: Paths[] = [
   {
     title: 'Getting Started',
     href: '/getting-started',
+    icon: LuRocket,
     noLink: true,
     items: [
       { title: 'Quick Start', href: '/quick-start' },
@@ -16,6 +27,7 @@ export const Documents: Paths[] = [
   {
     title: 'Earning',
     href: '/earning',
+    icon: LuTrendingUp,
     noLink: true,
     items: [
       { title: 'USD', href: '/usd' },
@@ -34,6 +46,7 @@ export const Documents: Paths[] = [
   {
     title: 'Withdrawing',
     href: '/withdrawing',
+    icon: LuWalletMinimal,
     noLink: true,
     items: [
       { title: 'Withdrawal', href: '/withdrawal' },
@@ -44,6 +57,7 @@ export const Documents: Paths[] = [
   {
     title: 'Rewards & Referrals',
     href: '/referrals',
+    icon: LuGift,
     noLink: true,
     items: [{ title: 'Referrals Overview', href: '/overview' }],
   },
@@ -51,6 +65,7 @@ export const Documents: Paths[] = [
   {
     title: 'Security',
     href: '/security',
+    icon: LuShieldCheck,
     noLink: true,
     items: [
       { title: 'Audits', href: '/audits' },
@@ -62,6 +77,7 @@ export const Documents: Paths[] = [
   {
     title: 'Legal',
     href: '/legal',
+    icon: LuScale,
     noLink: true,
     items: [
       { title: 'Terms of Service', href: '/terms-of-service' },
@@ -73,6 +89,7 @@ export const Documents: Paths[] = [
   {
     title: 'Advanced',
     href: '/advanced',
+    icon: LuSettings2,
     noLink: true,
     items: [
       { title: 'How Your Wallet & Security Work', href: '/wallet-and-security' },

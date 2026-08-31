@@ -25,7 +25,7 @@ export function SubLink(props: Paths & { level: number; isSheet: boolean }) {
 
   if (!isRoute(props)) return
 
-  const { title, href, items, noLink, level, isSheet } = props
+  const { title, href, items, noLink, level, isSheet, icon: Icon } = props
 
   const Comp = (
     <Anchor activeClassName="text-primary text-sm font-semibold" href={href}>
@@ -40,7 +40,10 @@ export function SubLink(props: Paths & { level: number; isSheet: boolean }) {
       Comp
     )
   ) : (
-    <h2 className="font-bold text-primary sm:text-sm">{title}</h2>
+    <h2 className="flex items-center gap-2 font-bold text-primary sm:text-sm">
+      {Icon && <Icon className="size-4 shrink-0" />}
+      {title}
+    </h2>
   )
 
   if (!items) {

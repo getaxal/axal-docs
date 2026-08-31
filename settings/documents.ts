@@ -4,7 +4,6 @@ export const Documents: Paths[] = [
   {
     title: 'Getting Started',
     href: '/getting-started',
-    heading: 'Getting Started',
     noLink: true,
     items: [
       { title: 'Quick Start', href: '/quick-start' },
@@ -17,7 +16,6 @@ export const Documents: Paths[] = [
   {
     title: 'Earning',
     href: '/earning',
-    heading: 'Earning',
     noLink: true,
     items: [
       { title: 'USD', href: '/usd' },
@@ -36,7 +34,6 @@ export const Documents: Paths[] = [
   {
     title: 'Withdrawing',
     href: '/withdrawing',
-    heading: 'Withdrawing',
     noLink: true,
     items: [
       { title: 'Withdrawal', href: '/withdrawal' },
@@ -47,7 +44,6 @@ export const Documents: Paths[] = [
   {
     title: 'Rewards & Referrals',
     href: '/referrals',
-    heading: 'Rewards & Referrals',
     noLink: true,
     items: [{ title: 'Referrals Overview', href: '/overview' }],
   },
@@ -55,7 +51,6 @@ export const Documents: Paths[] = [
   {
     title: 'Security',
     href: '/security',
-    heading: 'Security',
     noLink: true,
     items: [
       { title: 'Audits', href: '/audits' },
@@ -67,7 +62,6 @@ export const Documents: Paths[] = [
   {
     title: 'Legal',
     href: '/legal',
-    heading: 'Legal',
     noLink: true,
     items: [
       { title: 'Terms of Service', href: '/terms-of-service' },
@@ -79,7 +73,6 @@ export const Documents: Paths[] = [
   {
     title: 'Advanced',
     href: '/advanced',
-    heading: 'Advanced',
     noLink: true,
     items: [
       { title: 'How Your Wallet & Security Work', href: '/wallet-and-security' },

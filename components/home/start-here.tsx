@@ -22,7 +22,7 @@ const items: StartHereItem[] = [
     href: '/docs/security/audits',
   },
   {
-    icon: '/home-icons/money-out.png',
+    icon: '/home-icons/money-out.svg',
     question: 'How do I get my money out?',
     answer: 'Withdraw to your bank or an external wallet any time.',
     href: '/docs/withdrawing/withdrawal',
@@ -34,7 +34,7 @@ const items: StartHereItem[] = [
     href: '/docs/referrals/overview',
   },
   {
-    icon: '/home-icons/fees.png',
+    icon: '/home-icons/fees.svg',
     question: 'Are there fees?',
     answer: 'No deposit or withdrawal fees.',
     href: '/docs/earning/fee-structure',

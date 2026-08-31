@@ -11,6 +11,7 @@ import {
   loadfromgithub,
   rightsidebar,
   siteicon,
+  siteicondark,
   sitename,
   tableofcontent,
   totopscroll,
@@ -35,6 +36,7 @@ interface AppSettings {
   openGraph: OpenGraph
   rightbar: boolean
   siteicon: string
+  siteicondark: string
   title: string
   toc: boolean
   totop: boolean
@@ -57,6 +59,7 @@ export const Settings: AppSettings = {
   metadataBase: url,
   description,
   siteicon,
+  siteicondark,
   keywords,
   openGraph: {
     type: 'website',

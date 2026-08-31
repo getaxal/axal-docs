@@ -45,25 +45,35 @@ html {
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.145 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.145 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.985 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
+  /* Axal design tokens — dark mode (a soft charcoal, not near-black) */
+  --bg: #202220;
+  --surface: #2a2c2a;
+  --surface-soft: #303230;
+  --ink: #f2f3f0;
+  --stone: #a3a8a0;
+  --border: #3a3c3a;
+  --accent: #69b247;
+  --accent-deep: #7fc766;
+  --accent-soft: #23331f;
+  --cream: #2a2c28;
+
+  --background: var(--bg);
+  --foreground: var(--ink);
+  --card: var(--surface);
+  --card-foreground: var(--ink);
+  --popover: var(--surface);
+  --popover-foreground: var(--ink);
+  --primary: var(--accent-deep);
+  --primary-foreground: var(--bg);
+  --secondary: var(--surface-soft);
+  --secondary-foreground: var(--ink);
+  --muted: var(--cream);
+  --muted-foreground: var(--stone);
+  --accent-foreground: var(--bg);
   --destructive: oklch(0.396 0.141 25.723);
   --destructive-foreground: oklch(0.637 0.237 25.331);
-  --border: oklch(0.269 0 0);
-  --input: oklch(0.269 0 0);
-  --ring: oklch(0.439 0 0);
+  --input: var(--surface);
+  --ring: var(--accent);
 }
 
 @theme inline {
@@ -127,6 +137,27 @@ html {
   @apply prose prose-zinc prose-headings:scroll-m-20 prose-headings:font-semibold prose-code:rounded-md prose-code:p-1 prose-code:leading-6 prose-code:before:content-none prose-code:after:content-none prose-pre:border prose-pre:bg-neutral-100 prose-img:rounded-md prose-img:border;
   @apply w-full max-w-none pt-2 text-sm prose-code:text-xs;
   @apply dark:prose-invert prose-code:text-neutral-800 dark:prose-code:bg-neutral-900 dark:prose-code:text-white dark:prose-pre:bg-neutral-900;
+}
+
+/* Tailwind Typography's wide-gamut (lab()) fallback block redeclares
+   --tw-prose-headings etc. directly on the heading/paragraph/link elements
+   themselves (not on .typography), so setting those vars on the .typography
+   ancestor doesn't win — the redeclaration on the element beats an inherited
+   value regardless of layers. Force the actual colors directly instead. */
+.typography :where(h1, h2, h3, h4, h5, h6) {
+  color: var(--ink) !important;
+}
+.typography :where(p, li, td, th, blockquote, dt) {
+  color: var(--ink) !important;
+}
+.typography :where(strong, b) {
+  color: var(--ink) !important;
+}
+.typography :where(a) {
+  color: var(--accent-deep) !important;
+}
+.typography :where(code) {
+  color: var(--ink) !important;
 }
 
 .typography img {

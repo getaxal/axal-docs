@@ -1,5 +1,6 @@
-import Image from 'next/image'
 import Link from 'next/link'
+
+import { IconBadge } from '@/components/home/icon-badge'
 
 const PHONE_TEL = 'tel:+17819719463'
 const PHONE_WHATSAPP = 'https://wa.me/17819719463'
@@ -34,7 +35,7 @@ export function SupportSection() {
             rel={item.external ? 'noopener noreferrer' : undefined}
             target={item.external ? '_blank' : undefined}
           >
-            <Image alt="" className="size-11 shrink-0" height={44} src={item.icon} width={44} />
+            <IconBadge icon={item.icon} />
             <span className="flex flex-col gap-0.5">
               <span className="text-[18px] font-medium text-ink">{item.title}</span>
               <span className="text-sm text-ink/60">{item.subtitle}</span>

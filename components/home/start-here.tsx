@@ -1,5 +1,6 @@
-import Image from 'next/image'
 import Link from 'next/link'
+
+import { IconBadge } from '@/components/home/icon-badge'
 
 interface StartHereItem {
   icon: string
@@ -58,13 +59,7 @@ export function StartHere() {
             href={item.href}
             key={item.href}
           >
-            <Image
-              alt=""
-              className="size-11 shrink-0"
-              height={44}
-              src={item.icon}
-              width={44}
-            />
+            <IconBadge icon={item.icon} />
             <span className="flex flex-col gap-0.5">
               <span className="text-[18px] font-medium text-ink">{item.question}</span>
               <span className="text-sm text-ink/60">{item.answer}</span>

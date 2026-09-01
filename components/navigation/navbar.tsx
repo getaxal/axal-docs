@@ -14,31 +14,33 @@ import { GitHubLink, Navigations } from '@/settings/navigation'
 
 export function Navbar() {
   return (
-    <nav className="bg-opacity-5 sticky top-0 z-50 mx-auto flex h-16 w-full items-center justify-between border-b p-1 px-2 backdrop-blur-xl backdrop-filter sm:p-3 md:gap-2 md:px-4">
-      <div className="flex items-center gap-5">
-        <SheetLeft />
-        <Logo />
-        <div className="hidden items-center gap-5 text-sm font-medium text-muted-foreground md:flex">
-          <NavMenu />
+    <nav className="bg-opacity-5 sticky top-0 z-50 h-16 w-full border-b backdrop-blur-xl backdrop-filter">
+      <div className="mx-auto flex h-full w-full max-w-[1400px] items-center justify-between p-1 px-2 sm:p-3 md:gap-2 md:px-4">
+        <div className="flex items-center gap-5">
+          <SheetLeft />
+          <Logo />
+          <div className="hidden items-center gap-5 text-sm font-medium text-muted-foreground md:flex">
+            <NavMenu />
+          </div>
         </div>
-      </div>
 
-      <div className="flex items-center gap-2">
-        <Search />
-        <div className="flex gap-2 sm:ml-0">
-          {GitHubLink.href && (
-            <Link
-              aria-label="View the repository on GitHub"
-              className={buttonVariants({ variant: 'outline', size: 'icon-lg' })}
-              href={GitHubLink.href}
-              rel="noopener noreferrer"
-              target="_blank"
-              title="View the repository on GitHub"
-            >
-              <LuGithub className="size-4" />
-            </Link>
-          )}
-          <ModeToggle />
+        <div className="flex items-center gap-2">
+          <Search />
+          <div className="flex gap-2 sm:ml-0">
+            {GitHubLink.href && (
+              <Link
+                aria-label="View the repository on GitHub"
+                className={buttonVariants({ variant: 'outline', size: 'icon-lg' })}
+                href={GitHubLink.href}
+                rel="noopener noreferrer"
+                target="_blank"
+                title="View the repository on GitHub"
+              >
+                <LuGithub className="size-4" />
+              </Link>
+            )}
+            <ModeToggle />
+          </div>
         </div>
       </div>
     </nav>

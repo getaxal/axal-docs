@@ -51,7 +51,7 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
       <body className={`${seasonSans.variable} font-medium antialiased`}>
         <Providers>
           <Navbar />
-          <main className="h-auto px-5 sm:px-8">{children}</main>
+          <main className="mx-auto h-auto w-full max-w-[1400px] px-5 sm:px-8">{children}</main>
           <Footer />
         </Providers>
       </body>

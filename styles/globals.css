@@ -113,6 +113,13 @@ html {
   --radius-pill: var(--radius-pill);
 }
 
+.icon-badge-dim {
+  opacity: 0;
+}
+.dark .icon-badge-dim {
+  opacity: 0.12;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;

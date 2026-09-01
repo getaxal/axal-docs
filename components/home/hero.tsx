@@ -3,7 +3,7 @@ import { Search } from '@/components/navigation/search'
 
 export function Hero() {
   return (
-    <section className="mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-12 py-16 md:grid-cols-2 md:py-24">
+    <section className="mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-12 pb-16 md:grid-cols-2 md:pb-24">
       <div className="flex flex-col items-start gap-5">
         <span className="text-sm font-semibold tracking-wide text-accent uppercase">
           Axal Help Center

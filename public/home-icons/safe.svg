@@ -1,0 +1,48 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Frame 2147225448" filter="url(#filter0_ii_0_1186)">
+<g clip-path="url(#clip0_0_1186)">
+<rect width="44" height="44" rx="8.97959" fill="white"/>
+<g id="Ellipse 11780" filter="url(#filter1_f_0_1186)">
+<ellipse cx="15.9388" cy="29.6338" rx="6.5102" ry="6.28571" fill="#3F87FC"/>
+</g>
+<g id="Ellipse 11781" filter="url(#filter2_f_0_1186)">
+<ellipse cx="31.2035" cy="13.0204" rx="6.5102" ry="6.28571" fill="#3F87FC"/>
+</g>
+<g id="Grow Your Savings Icon">
+<path id="Subtract" fill-rule="evenodd" clip-rule="evenodd" d="M22.5157 12.1698C22.2265 11.8959 21.7735 11.8959 21.4843 12.1698C19.4675 14.0798 16.7462 15.2501 13.75 15.2501C13.7023 15.2501 13.6547 15.2498 13.6072 15.2492C13.2798 15.2452 12.9877 15.4539 12.8854 15.7649C12.4729 17.0197 12.25 18.3596 12.25 19.7502C12.25 25.6922 16.3141 30.6831 21.8131 32.0984C21.9357 32.13 22.0643 32.13 22.1869 32.0984C27.6859 30.6831 31.75 25.6922 31.75 19.7502C31.75 18.3596 31.5271 17.0197 31.1146 15.7649C31.0123 15.4539 30.7202 15.2452 30.3928 15.2492C30.3453 15.2498 30.2977 15.2501 30.25 15.2501C27.2538 15.2501 24.5325 14.0798 22.5157 12.1698ZM25.6103 20.1859C25.8511 19.8489 25.773 19.3805 25.4359 19.1397C25.0989 18.8989 24.6305 18.977 24.3897 19.3141L21.1543 23.8436L19.5303 22.2197C19.2374 21.9268 18.7626 21.9268 18.4697 22.2197C18.1768 22.5126 18.1768 22.9874 18.4697 23.2803L20.7197 25.5303C20.8756 25.6862 21.0921 25.7656 21.3119 25.7474C21.5316 25.7293 21.7322 25.6153 21.8603 25.4359L25.6103 20.1859Z" fill="#3F87FC"/>
+</g>
+</g>
+<rect x="0.22449" y="0.22449" width="43.551" height="43.551" rx="8.7551" stroke="black" stroke-opacity="0.05" stroke-width="0.44898"/>
+</g>
+<defs>
+<filter id="filter0_ii_0_1186" x="0" y="0" width="44" height="44" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="1.57143"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.247059 0 0 0 0 0.529412 0 0 0 0 0.988235 0 0 0 0.5 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow_0_1186"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="1.12245"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.247059 0 0 0 0 0.529412 0 0 0 0 0.988235 0 0 0 0.5 0"/>
+<feBlend mode="normal" in2="effect1_innerShadow_0_1186" result="effect2_innerShadow_0_1186"/>
+</filter>
+<filter id="filter1_f_0_1186" x="-17.5102" y="-3.59065" width="66.898" height="66.449" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="13.4694" result="effect1_foregroundBlur_0_1186"/>
+</filter>
+<filter id="filter2_f_0_1186" x="2.24431" y="-15.7143" width="57.9184" height="57.4694" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="11.2245" result="effect1_foregroundBlur_0_1186"/>
+</filter>
+<clipPath id="clip0_0_1186">
+<rect width="44" height="44" rx="8.97959" fill="white"/>
+</clipPath>
+</defs>
+</svg>

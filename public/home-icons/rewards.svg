@@ -1,0 +1,53 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Frame 2147225448" filter="url(#filter0_ii_0_1347)">
+<g clip-path="url(#clip0_0_1347)">
+<rect width="44" height="44" rx="8.97959" fill="white"/>
+<g id="Ellipse 11780" filter="url(#filter1_f_0_1347)">
+<ellipse cx="15.9388" cy="29.6338" rx="6.5102" ry="6.28571" fill="#1AB8F7"/>
+</g>
+<g id="Ellipse 11781" filter="url(#filter2_f_0_1347)">
+<ellipse cx="31.2035" cy="13.0204" rx="6.5102" ry="6.28571" fill="#1AB8F7"/>
+</g>
+<g id="Grow Your Savings Icon">
+<g id="Union">
+<path d="M14.5 16.375C14.5 14.0968 16.3468 12.25 18.625 12.25C20.9032 12.25 22.75 14.0968 22.75 16.375C22.75 18.6532 20.9032 20.5 18.625 20.5C16.3468 20.5 14.5 18.6532 14.5 16.375Z" fill="#1AB8F7"/>
+<path d="M24.25 18.625C24.25 16.761 25.761 15.25 27.625 15.25C29.489 15.25 31 16.761 31 18.625C31 20.489 29.489 22 27.625 22C25.761 22 24.25 20.489 24.25 18.625Z" fill="#1AB8F7"/>
+<path d="M11.5 29.125C11.5 25.19 14.69 22 18.625 22C22.56 22 25.75 25.19 25.75 29.125V29.1276C25.75 29.1674 25.7496 29.2074 25.749 29.2469C25.7446 29.5054 25.6074 29.7435 25.3859 29.8768C23.4107 31.0661 21.0966 31.75 18.625 31.75C16.1534 31.75 13.8393 31.0661 11.8641 29.8768C11.6426 29.7435 11.5054 29.5054 11.501 29.2469C11.5003 29.2064 11.5 29.1657 11.5 29.125Z" fill="#1AB8F7"/>
+<path d="M27.2498 29.1281C27.2498 29.1762 27.2494 29.2244 27.2486 29.2722C27.2429 29.6108 27.1612 29.9378 27.0157 30.232C27.2172 30.2439 27.4203 30.25 27.6248 30.25C29.2206 30.25 30.732 29.8803 32.0764 29.2213C32.3234 29.1002 32.4843 28.8536 32.4957 28.5787C32.4984 28.5111 32.4998 28.4432 32.4998 28.375C32.4998 25.6826 30.3172 23.5 27.6248 23.5C26.8784 23.5 26.1711 23.6678 25.5387 23.9676C26.6135 25.4061 27.2498 27.1912 27.2498 29.125V29.1281Z" fill="#1AB8F7"/>
+</g>
+</g>
+</g>
+<rect x="0.22449" y="0.22449" width="43.551" height="43.551" rx="8.7551" stroke="black" stroke-opacity="0.05" stroke-width="0.44898"/>
+</g>
+<defs>
+<filter id="filter0_ii_0_1347" x="0" y="0" width="44" height="44" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="1.57143"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.101961 0 0 0 0 0.721569 0 0 0 0 0.968627 0 0 0 0.5 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow_0_1347"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="1.12245"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.101961 0 0 0 0 0.721569 0 0 0 0 0.968627 0 0 0 0.5 0"/>
+<feBlend mode="normal" in2="effect1_innerShadow_0_1347" result="effect2_innerShadow_0_1347"/>
+</filter>
+<filter id="filter1_f_0_1347" x="-17.5102" y="-3.59065" width="66.898" height="66.449" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="13.4694" result="effect1_foregroundBlur_0_1347"/>
+</filter>
+<filter id="filter2_f_0_1347" x="2.24431" y="-15.7143" width="57.9184" height="57.4694" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="11.2245" result="effect1_foregroundBlur_0_1347"/>
+</filter>
+<clipPath id="clip0_0_1347">
+<rect width="44" height="44" rx="8.97959" fill="white"/>
+</clipPath>
+</defs>
+</svg>

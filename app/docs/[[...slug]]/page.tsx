@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation'
 
 import { ArticleBreadcrumb } from '@/components/article/breadcrumb'
 import { Pagination } from '@/components/article/pagination'
+import { SupportSection } from '@/components/home/support-section'
 import { TableOfContents } from '@/components/toc'
 import { Separator } from '@/components/ui/separator'
 import { Typography } from '@/components/ui/typography'
@@ -35,6 +36,7 @@ export default async function Pages({ params }: PageProps) {
           <section>{content}</section>
           <Pagination pathname={pathName} />
         </Typography>
+        <SupportSection />
       </section>
       <TableOfContents frontmatter={frontmatter} pathName={pathName} tocs={{ tocs }} />
     </div>

@@ -7,7 +7,7 @@ export const Navigations = [
 ]
 
 export const GitHubLink = {
-  href: 'https://github.com/getaxal/',
+  href: 'https://github.com/getaxal/axal-docs',
 }
 
 export const SocialLinks = [

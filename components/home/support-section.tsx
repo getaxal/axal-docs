@@ -2,22 +2,22 @@ import Link from 'next/link'
 
 import { IconBadge } from '@/components/home/icon-badge'
 
-const PHONE_TEL = 'tel:+17819719463'
 const PHONE_WHATSAPP = 'https://wa.me/17819719463'
+const SUPPORT_EMAIL = 'support@axal.com'
 
 const items = [
   {
     icon: '/home-icons/chat-with-us.svg',
-    title: 'Chat with us',
-    subtitle: 'Message us on WhatsApp',
+    title: 'Reach us on WhatsApp',
+    subtitle: 'Message or call anytime',
     href: PHONE_WHATSAPP,
     external: true,
   },
   {
-    icon: '/home-icons/call-us.svg',
-    title: 'Call us at',
-    subtitle: '(781) 971-9463 · Mon–Fri, 9 AM–6:30 PM ET',
-    href: PHONE_TEL,
+    icon: '/home-icons/mail.svg',
+    title: 'Email us',
+    subtitle: SUPPORT_EMAIL,
+    href: `mailto:${SUPPORT_EMAIL}`,
     external: false,
   },
 ]

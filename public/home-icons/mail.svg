@@ -9,9 +9,9 @@
 <ellipse cx="31.2035" cy="13.0204" rx="6.5102" ry="6.28571" fill="#9FE951"/>
 </g>
 <g id="Grow Your Savings Icon">
-<g id="Vector">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M25 13.75C25 13.3358 25.3358 13 25.75 13H30.25C30.6642 13 31 13.3358 31 13.75V18.25C31 18.6642 30.6642 19 30.25 19C29.8358 19 29.5 18.6642 29.5 18.25V15.5607L24.7803 20.2803C24.4874 20.5732 24.0126 20.5732 23.7197 20.2803C23.4268 19.9874 23.4268 19.5126 23.7197 19.2197L28.4393 14.5H25.75C25.3358 14.5 25 14.1642 25 13.75Z" fill="#9FE951"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M11.5 14.5C11.5 12.8431 12.8431 11.5 14.5 11.5H15.8716C16.732 11.5 17.482 12.0856 17.6906 12.9202L18.7964 17.3434C18.9794 18.0753 18.7059 18.8455 18.1024 19.2982L16.8088 20.2684C16.6745 20.3691 16.6453 20.5167 16.683 20.6197C17.8185 23.7195 20.2805 26.1815 23.3803 27.317C23.4833 27.3547 23.6309 27.3255 23.7316 27.1912L24.7018 25.8976C25.1545 25.2941 25.9247 25.0206 26.6566 25.2036L31.0798 26.3094C31.9144 26.518 32.5 27.268 32.5 28.1284V29.5C32.5 31.1569 31.1569 32.5 29.5 32.5H27.25C18.5515 32.5 11.5 25.4485 11.5 16.75V14.5Z" fill="#9FE951"/>
+<g id="Subtract">
+<path d="M11.5 18.6691V27.25C11.5 28.9069 12.8431 30.25 14.5 30.25H29.5C31.1569 30.25 32.5 28.9069 32.5 27.25V18.6691L23.5723 24.1631C22.6081 24.7564 21.3919 24.7564 20.4277 24.1631L11.5 18.6691Z" fill="#9FE951"/>
+<path d="M32.5 16.9078V16.75C32.5 15.0931 31.1569 13.75 29.5 13.75H14.5C12.8431 13.75 11.5 15.0931 11.5 16.75V16.9078L21.2139 22.8856C21.696 23.1823 22.304 23.1823 22.7861 22.8856L32.5 16.9078Z" fill="#9FE951"/>
 </g>
 </g>
 </g>
@@ -25,13 +25,13 @@
 <feOffset/>
 <feGaussianBlur stdDeviation="1.57143"/>
 <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0.623529 0 0 0 0 0.913725 0 0 0 0 0.317647 0 0 0 0.5 0"/>
+<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.5 0"/>
 <feBlend mode="normal" in2="shape" result="effect1_innerShadow_0_6"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feOffset/>
 <feGaussianBlur stdDeviation="1.12245"/>
 <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0.623529 0 0 0 0 0.913725 0 0 0 0 0.317647 0 0 0 0.5 0"/>
+<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.5 0"/>
 <feBlend mode="normal" in2="effect1_innerShadow_0_6" result="effect2_innerShadow_0_6"/>
 </filter>
 <filter id="filter1_f_0_6" x="-17.5102" y="-3.59065" width="66.898" height="66.449" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">

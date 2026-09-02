@@ -1,4 +1,4 @@
-export const url = 'https://rubix-documents.vercel.app'
+export const url = 'https://docs.getaxal.com'
 export const siteicon = '/Axal-Primary-Black_Thicker.png'
 export const siteicondark = '/Axal-Primary-White_Thicker-1.png'
 
@@ -7,18 +7,18 @@ export const gtmconnected = true
 
 export const sitename = 'Documentation'
 export const description =
-  'This comprehensive documentation template, crafted with Next.js and available as open-source, delivers a sleek and responsive design, tailored to meet all your project documentation requirements.'
-export const keywords = ['Next.js', 'documentation', 'Rubix Studios', 'open source', 'SEO']
+  'Help center and documentation for Axal, a non-custodial automated stablecoin savings product.'
+export const keywords = ['Axal', 'stablecoin', 'savings', 'crypto', 'documentation', 'help center']
 export const urlimage = '/images/og-image.png'
-export const imagealt = 'Rubix Studios Documentation'
-export const twitterhandle = '@RubixStudios'
+export const imagealt = 'Axal Documentation'
+export const twitterhandle = '@getaxal'
 
-export const companyname = 'Rubix Studios'
+export const companyname = 'Axal'
 export const companylink = 'https://axal.com/'
 
-export const branding = true
+export const branding = false
 export const rightsidebar = true
-export const feedbackedit = true
+export const feedbackedit = false
 export const tableofcontent = true
 export const totopscroll = true
 

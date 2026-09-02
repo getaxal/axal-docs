@@ -38,15 +38,9 @@ export function ArticleBreadcrumb({ paths }: BreadcrumbProps) {
           <>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
-              <BreadcrumbLink asChild>
-                <Link
-                  aria-label={toTitleCase(paths[0])}
-                  href={`/docs/${paths[0]}`}
-                  title={toTitleCase(paths[0])}
-                >
-                  {toTitleCase(paths[0])}
-                </Link>
-              </BreadcrumbLink>
+              {/* Section-root paths (e.g. "getting-started") have no real page of their
+                  own in this site, so this can't be a link — it would 404. */}
+              <BreadcrumbPage>{toTitleCase(paths[0])}</BreadcrumbPage>
             </BreadcrumbItem>
 
             <BreadcrumbSeparator />
@@ -78,21 +72,17 @@ export function ArticleBreadcrumb({ paths }: BreadcrumbProps) {
           </>
         ) : (
           paths.map((path, index) => {
-            const href = `/docs/${paths.slice(0, index + 1).join('/')}`
+            // Only the final segment is a real page — every path before it is a
+            // section root with no index page of its own, so it can't be a link.
+            const isLast = index === paths.length - 1
 
             return (
               <Fragment key={path}>
                 <BreadcrumbSeparator />
                 <BreadcrumbItem>
-                  {index < paths.length - 1 ? (
-                    <BreadcrumbLink asChild>
-                      <Link aria-label={toTitleCase(path)} href={href} title={toTitleCase(path)}>
-                        {toTitleCase(path)}
-                      </Link>
-                    </BreadcrumbLink>
-                  ) : (
-                    <BreadcrumbPage className="b">{toTitleCase(path)}</BreadcrumbPage>
-                  )}
+                  <BreadcrumbPage className={isLast ? 'b' : undefined}>
+                    {toTitleCase(path)}
+                  </BreadcrumbPage>
                 </BreadcrumbItem>
               </Fragment>
             )

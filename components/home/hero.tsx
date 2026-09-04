@@ -8,12 +8,9 @@ export function Hero() {
         <span className="text-sm font-semibold tracking-wide text-accent uppercase">
           Axal Help Center
         </span>
-        <h1 className="text-4xl font-semibold text-ink sm:text-5xl">
-          How can we help you today?
-        </h1>
+        <h1 className="text-4xl font-semibold text-ink sm:text-5xl">How Axal works</h1>
         <p className="max-w-md text-base text-stone">
-          Search our help center or browse guides on deposits, earning, withdrawals, and
-          security.
+          Guides for adding money, earning, withdrawing, and how yield is made.
         </p>
         <Search placeholder="Try 'how do I withdraw'" variant="hero" />
       </div>

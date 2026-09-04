@@ -1,9 +1,15 @@
+'use client'
+
+import { useEffect, useState } from 'react'
 import { LuArrowUpRight } from 'react-icons/lu'
 
 const WIDTH = 280
 const HEIGHT = 110
+const STARTING_BALANCE = 12480.36
+const TICK_AMOUNT = 0.01
+const TICK_INTERVAL_MS = 2500
 
-// Portfolio value samples (0-100 scale), trending up like a real growth curve.
+// Decorative shape — trending up like a real growth curve.
 const values = [8, 9, 11, 13, 15, 19, 24, 28, 30, 36, 45, 55, 63, 70, 75, 79, 83, 87, 90, 93]
 
 function toPoints(vals: number[]) {
@@ -34,18 +40,32 @@ const areaPath = `${linePath} L ${WIDTH},${HEIGHT} L 0,${HEIGHT} Z`
 const [lastX, lastY] = points[points.length - 1]
 
 export function BalanceCard() {
+  const [balance, setBalance] = useState(STARTING_BALANCE)
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setBalance((prev) => prev + TICK_AMOUNT)
+    }, TICK_INTERVAL_MS)
+    return () => clearInterval(id)
+  }, [])
+
+  const earnedSoFar = balance - STARTING_BALANCE
+
   return (
     <div className="mx-auto w-full max-w-80 rounded-[32px] border border-border bg-surface p-6 shadow-xl">
-      <p className="text-xs font-medium text-stone">Balance</p>
-      <p className="mt-1 text-4xl font-semibold text-ink">$12,480.36</p>
+      <p className="text-xs font-medium text-stone">Total balance</p>
+      <p className="mt-1 text-4xl font-semibold text-ink">
+        ${balance.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+      </p>
 
       <div className="mt-2 flex items-center gap-1 text-sm font-medium text-accent-deep">
-        <LuArrowUpRight className="size-4" />
-        +$24.18 today
+        <LuArrowUpRight className="size-4" />+$
+        {earnedSoFar.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}{' '}
+        today
       </div>
 
       <div className="mt-4 inline-flex items-center rounded-full bg-accent-soft px-3 py-1 text-xs font-semibold text-accent-deep">
-        7.2% APY
+        7.6% APY
       </div>
 
       <div className="mt-6">

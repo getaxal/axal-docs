@@ -28,7 +28,11 @@ export function SubLink(props: Paths & { level: number; isSheet: boolean }) {
   const { title, href, items, noLink, level, isSheet, icon: Icon } = props
 
   const Comp = (
-    <Anchor activeClassName="text-primary text-sm font-semibold" href={href}>
+    <Anchor
+      activeClassName="text-primary font-semibold hover:text-primary"
+      className="-mx-1.5 rounded-md px-1.5 py-0.5 transition-colors hover:bg-muted hover:text-foreground"
+      href={href}
+    >
       {title}
     </Anchor>
   )
@@ -56,7 +60,11 @@ export function SubLink(props: Paths & { level: number; isSheet: boolean }) {
         <div className="mr-3 flex items-center gap-2 text-sm">
           {titleOrLink}
           <CollapsibleTrigger asChild>
-            <Button className="ml-auto h-6 w-6" size="icon" variant="link">
+            <Button
+              className="ml-auto h-6 w-6 text-muted-foreground hover:bg-muted hover:text-foreground"
+              size="icon"
+              variant="ghost"
+            >
               {!isOpen ? (
                 <LuChevronRight className="h-[0.9rem] w-[0.9rem]" />
               ) : (

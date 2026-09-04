@@ -1,0 +1,109 @@
+---
+title: "How your wallet & security work"
+description: "How Axal creates your wallet, uses EIP-7702 and account abstraction, and secures signing with Trusted Execution Environments"
+tags: ["Wallet", "TEE", "7702", "Security", "Self-Custody"]
+---
+
+Axal accounts are self-custodial — you alone control your private key. This page explains how
+your wallet is created, and how Axal is able to act on your behalf within strict, verifiable
+limits, without ever holding your funds.
+
+## How your wallet is created
+
+Privy is the wallet infrastructure embedded inside Axal — the secure plumbing that lets you use
+the app without installing a browser extension or juggling seed phrases. Privy spins up a
+self-custodial wallet the moment you sign in (with email, passkey, or an external wallet). You
+alone control that wallet's private key; neither Axal nor Privy can touch your funds.
+
+- **Withdrawal Options:** You can export your wallet's private key or seed phrase at any time
+  through your account settings — see [Export your wallet](/docs/trust-safety/export-your-wallet)
+- **Standard Compatibility:** Withdrawn wallets are fully compatible with any standard Ethereum
+  wallet like MetaMask, Rainbow, or hardware wallets
+- **No Lock-In:** Your funds are never tied to the Axal platform — you can access them directly
+  through any compatible wallet
+- **Persistent Access:** Even if Axal were to shut down, you would still have full access to your
+  funds through your withdrawn wallet credentials
+
+## Smart account capabilities with EIP-7702
+
+Your Axal wallet follows the ERC-7702 standard, which lets a standard key-controlled account adopt
+smart-account behavior on demand. Your account behaves like a normal wallet by default; when
+advanced features are needed, the wallet temporarily gains the ability to execute code for that
+action, then returns to normal once it completes. This is what powers gasless transactions and
+batched, automated rebalancing without requiring you to sign or approve each individual move.
+
+<details>
+<summary>Technical details</summary>
+
+![EIP 7702 process flow](/7702/0_zn_e3bm5cwGfNEpZ.png)
+
+**How it works at a glance:**
+
+1. Normal state: your account acts like any other standard wallet.
+2. Upgrade step: your wallet sends a transaction that includes an authorization referencing code to run.
+3. Enhanced state: your account can validate and execute advanced logic for that action.
+4. Back to normal: once done, the account returns to standard behavior.
+
+This is what powers:
+
+- **Gasless transactions:** Deposits and withdrawals happen without you needing to manage gas fees
+- **Batched, automated operations:** Axal routes your capital across lending protocols and rebalances positions without requiring you to sign or approve each move
+- **No separate contract deployment:** advanced features turn on only when needed, avoiding always-on overhead
+
+You can read more about the underlying standard:
+- [EIP-7702, MetaMask, and wallets](https://www.alchemy.com/blog/eip-7702-metamask-and-wallets)
+- [EIP-7702 and the Ethereum Pectra hardfork](https://www.alchemy.com/blog/eip-7702-ethereum-pectra-hardfork)
+
+### Account abstraction for Autopilot
+
+For Autopilot specifically, Axal also leverages Alchemy's ERC-4337 smart contract wallets on top of the same Privy authentication foundation, enabling:
+
+1. **Automatic Gas Sponsorship** — execute transactions and interact with DeFi protocols without needing ETH for gas
+2. **Batched Transactions** — execute multiple DeFi operations in a single confirmation, reducing approval prompts
+3. **Scheduled Operations** — time-based triggers for portfolio management, enabling true "set and forget" management
+4. **Security Guardrails** — per-session/per-app spending limits, time-locks for large withdrawals, and recovery mechanisms beyond seed phrases
+
+Behind the scenes, this smart contract wallet is fully controlled by your private key (via Privy), executes bundled transactions through a bundler, and lets gas be paid by a separate sponsoring account — all while keeping custody with you.
+
+</details>
+
+## Trusted Execution Environments (TEEs)
+
+Axal uses Trusted Execution Environments — the same class of technology behind Face ID and passkeys — to protect your keys and to ensure nobody at Axal, including Axal staff, can tamper with signing software or access your keys, even for debugging.
+
+- **Isolated Processing:** Keys are generated and stored in hardware-level isolated environments, separated from the main operating system
+- **Encrypted Memory:** Keys are processed in encrypted memory regions inaccessible to any external process
+- **Zero Knowledge Design:** Neither Axal nor Privy staff can ever access your keys
+
+Specifically, Axal uses [AWS Nitro Enclaves](https://aws.amazon.com/ec2/nitro/nitro-enclaves/) to run its signing software — a tamper-proof, fully encrypted environment nobody can look into. The TEE also provides **attestations**: cryptographic signatures that prove the code running inside the TEE is exactly the code Axal says it is. Example attestation:
+
+```json
+{
+  "Measurements": {
+    "HashAlgorithm": "Sha384 { ... }",
+    "PCR0": "7fb5c55bc2ecbb68ed99a13d7122abfc0666b926a79d5379bc58b9445c84217f59cfdd36c08b2c79552928702efe23e4",
+    "PCR1": "235c9e6050abf6b993c915505f3220e2d82b51aff830ad14cbecc2eec1bf0b4ae749d311c663f464cde9f718acca5286",
+    "PCR2": "0f0ac32c300289e872e6ac4d19b0b5ac4a9b020c98295643ff3978610750ce6a86f7edff24e3c0a4a445f2ff8a9ea79d"
+  }
+}
+```
+
+The `PCR2` field is a hash of the binary running inside the TEE. Anyone can build our signer code and generate their own attestation to verify it matches — we've open sourced our signer codebase so this can be independently checked.
+
+## Verified signing & delegated actions
+
+Axal carries out onchain actions on your behalf through a **verified signer**: software between Axal's servers and Privy's servers that checks every transaction against a policy before it's allowed to sign. Currently these rules are fixed by Axal (for example, "only deposit to pools with 7D APY greater than 5%"); user-specified rules are coming soon.
+
+Delegated signing is used for exactly two purposes:
+
+1. **Rebalancing** your portfolio to maintain the best return
+2. **Panic exiting** your positions if malicious behavior is detected in any supported pool
+
+Axal never sees your private keys — delegated signing requests to Privy are executed inside a TEE over HTTPS, so neither Axal nor an attacker can observe them. Today, the verification layer enforces a whitelist of pools you can interact with plus withdrawals to your own address only; broader user-defined policies are planned.
+
+## Self-custody, in short
+
+- Your wallet is non-custodial through Privy smart wallets — you remain in control
+- Security policies are enforced with TEE-based checks
+- Sensitive actions can require additional approval, such as two-factor authentication
+- Keep your private key and recovery phrase safe and offline when possible, enable two-factor authentication, and review transaction details before approving

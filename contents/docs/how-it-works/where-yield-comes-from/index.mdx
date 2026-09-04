@@ -1,0 +1,66 @@
+---
+title: Where Axal's Yield Comes From
+description: A plain explanation of how your USD and Bitcoin earn yield inside Axal.
+tags:
+  - Yield
+  - How it Works
+  - DeFi
+---
+
+Axal doesn't generate yield itself — it routes your idle balance into established lending markets
+and automatically moves it to wherever the safe, available return is best. This page explains that
+in plain terms, without assuming you know crypto.
+
+## The short version
+
+1. You deposit USD or Bitcoin.
+2. When you tap **Start earning**, Axal deploys that balance into vetted lending protocols —
+   places other people borrow from, paying interest, similar in spirit to how a bank lends out
+   deposits.
+3. That interest accrues to your balance continuously. Axal monitors these positions and can move
+   your funds or exit entirely if something looks unsafe.
+4. You can move funds back to idle, or withdraw, at any time.
+
+## Who's actually paying the yield?
+
+The yield comes from borrowers, not from Axal or from other users' deposits. On the lending
+protocols Axal uses (for example Morpho and Aave), borrowers post collateral and pay interest to
+borrow against it. That interest is what generates the APY you see in the app. Axal doesn't set
+this rate — it reflects real borrowing demand and can move up or down.
+
+## Why route across protocols instead of picking one?
+
+Rates on any single lending market change as more or less money flows in and out of it. By
+continuously comparing rates across multiple vetted protocols and networks, Axal can move your
+balance to wherever the safe rate is currently best, rather than leaving it parked in one place
+that's gone stale. This is done automatically — you don't have to compare rates or move funds
+yourself.
+
+## What Axal checks before using a protocol
+
+Not every lending market is included. Axal limits itself to protocols that meet a bar for safety
+history and liquidity, and the strategy stack is intentionally narrow rather than chasing every
+available yield source — see [Strategy stack](/docs/how-it-works/strategy-stack) for what's
+currently in use.
+
+## Key terms
+
+- **APY (Annual Percentage Yield)** — the rate your balance earns over a year, including
+  compounding. It moves with market conditions and is not fixed.
+- **Idle balance** — funds sitting in your account that are not currently earning yield.
+- **Yield-earning balance** — funds actively deployed into a strategy and accruing interest.
+- **Lending protocol** — a piece of software where lenders and borrowers meet on-chain; interest
+  paid by borrowers is what funds the yield.
+- **Non-custodial** — Axal never takes ownership of your funds; you hold your own wallet and can
+  withdraw or export it at any time.
+- **Smart wallet** — the self-custodial wallet automatically created for you when you sign up.
+- **Rebalancing** — Axal automatically moving your balance between protocols to keep it earning
+  the best available safe rate.
+- **De-peg** — when a stablecoin's market price drops below its intended $1 value; see
+  [Risks](/docs/trust-safety/risks).
+- **Liquidation** — the forced closing of a leveraged position when its collateral value falls too
+  far; not something that happens to a standard Axal USD or BTC deposit, but relevant background
+  if you read about DeFi lending elsewhere.
+
+Related: [Fees](/docs/how-it-works/fee-structure) · [Risks](/docs/trust-safety/risks) ·
+[Strategy stack](/docs/how-it-works/strategy-stack)

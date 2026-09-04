@@ -1,0 +1,40 @@
+---
+title: Audits & Bug Bounty
+description: Security audits and the live bug bounty program, run with Sherlock.
+tags:
+  - Security
+  - Audits
+  - Sherlock
+---
+
+<img src="/7702/GxmTidkWcAAwsgd.jpeg" alt="Axal x Sherlock Partnership" width="480" />
+
+Axal has partnered with [Sherlock](https://www.sherlock.xyz/), a web3 security firm, to run
+independent audits of Axal's systems. Sherlock is an auditor and bug bounty host — see
+[Partners](/docs/trust-safety/partners) for how this relationship works.
+
+Read the full [audit report (PDF)](/pdfs/Sherlock%20Audit%20-%20Axal.pdf). All identified issues
+have been addressed. Axal's signer is open source and open to community review.
+
+The audit combined a white-box review of Axal's Trusted Execution Environment-based signer and a
+black-box review of Axal's production servers — see [how your wallet works](/docs/trust-safety/how-your-wallet-works)
+for what the signer does.
+
+## How the audit worked
+
+- Design review and threat modeling across smart contracts, the TEE signer, services, and wallets.
+- Deep source review of critical components, including static analysis and targeted testing.
+- Review of environment hardening — access controls, build pipelines, and secrets handling.
+- Behavioral testing of the full system, exercising edge cases and pause/kill-switch paths.
+- Remediation and retesting to confirm fixes hold.
+
+## Ongoing
+
+Security doesn't end with one audit. Axal pairs audits with continuous monitoring and a live bug
+bounty so researchers can report issues as they're found.
+
+## Bug bounty
+
+Axal runs a live bug bounty hosted by Sherlock, with rewards up to 25,000 USDC for verified
+issues. Review scope and submit reports on the
+[bug bounty page](https://audits.sherlock.xyz/bug-bounties/105).

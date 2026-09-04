@@ -1,0 +1,47 @@
+---
+title: Risks
+description: A clear explanation of the risks of using Axal.
+tags:
+  - Security
+  - Risk
+---
+
+Before depositing, it's important to understand what can go wrong. Axal is not a bank and your
+balance is not insured the way a bank deposit is.
+
+- **Smart-contract risk** — a bug or exploit in a lending protocol Axal uses (for example Morpho,
+  Aave) could result in a loss of funds. Axal limits itself to protocols with an audit history and
+  track record, but this risk is never zero — see [Audits](/docs/trust-safety/audits).
+- **Market risk** — prices of assets you hold (Bitcoin, gold) can fall, and stablecoin yields move
+  with market lending demand rather than staying fixed.
+- **Stablecoin de-peg risk** — a stablecoin could temporarily or permanently trade below its
+  intended $1 value, particularly during periods of market stress.
+- **Counterparty risk** — Axal relies on third-party infrastructure (wallet provider, banking
+  rails, lending protocols). A failure at one of these providers could affect your ability to
+  access or move funds, even though Axal itself is non-custodial — see
+  [Partners](/docs/trust-safety/partners).
+- **Operational risk** — downtime or a bug in Axal's own systems (for example, the automated
+  rebalancing that moves your funds between protocols) could delay access to funds or a
+  rebalance.
+- **Regulatory risk** — changes in how stablecoins or DeFi lending are regulated could affect
+  which features or assets are available to you over time.
+
+## How Axal mitigates these risks
+
+- Protocols are added only after meeting a safety bar for audit history and track record —
+  see [Where yield comes from](/docs/how-it-works/where-yield-comes-from).
+- Axal is non-custodial: your funds sit in your own wallet, secured by a Trusted Execution
+  Environment — see [How your wallet works](/docs/trust-safety/how-your-wallet-works).
+- Positions are monitored continuously, and Axal can exit a protocol if it looks unsafe.
+- Independent audits are run by Sherlock — see [Audits](/docs/trust-safety/audits).
+
+## What you can do
+
+- Only deposit what you're comfortable putting at risk — see
+  [Axal vs a traditional savings account](/docs/how-it-works/axal-vs-savings) for when a bank
+  account may be the more conservative choice.
+- Enable [Face ID, passkeys, or 2FA](/docs/trust-safety/authenticator) on your account.
+- Read [Where Axal's yield comes from](/docs/how-it-works/where-yield-comes-from) so you
+  understand what's generating your return, not just the number.
+
+Past performance does not guarantee future returns.

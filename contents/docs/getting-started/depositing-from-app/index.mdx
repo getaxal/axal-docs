@@ -1,6 +1,6 @@
 ---
-title: Depositing from App
-description: "Learn how to transfer funds from CashApp, Coinbase, or Robinhood into Axal"
+title: Adding Money From Another App
+description: Transfer cash or crypto from CashApp, Coinbase, or Robinhood into Axal.
 tags:
   - Deposits
   - Mobile
@@ -8,28 +8,36 @@ tags:
   - Funding
 ---
 
-This section walks you through how to transfer existing cash or crypto from CashApp, Coinbase, or Robinhood accounts into Axal for the purposes of generating yield or self-custody.
+This walks you through moving cash or crypto you already hold in CashApp, Coinbase, or Robinhood
+into Axal.
 
-## Send Cash
+## Send cash
 
-Use this flow if you want to transfer dollars directly from your CashApp, Coinbase, or Robinhood balance.
+Transfers dollars directly from your CashApp, Coinbase, or Robinhood balance. Under the hood, this
+still moves through a payment partner rail (the same as a card or bank deposit) — it isn't a
+crypto transfer.
 
-1. From Add funds, Select From an app — choose from CashApp, Coinbase, or Robinhood.
+1. From **Add funds**, select **From an app** — choose CashApp, Coinbase, or Robinhood.
 2. Select your asset — choose **Cash**.
-3. Enter the amount you would like to transfer.
-4. Review and confirm the transfer amount.
+3. Enter the amount you'd like to transfer.
+4. Review and confirm.
 
-## Send Crypto
+## Send crypto
 
-Use this flow if you want to transfer an existing crypto asset from CashApp, Coinbase, or Robinhood into Axal.
+Transfers an existing crypto asset from CashApp, Coinbase, or Robinhood into Axal.
 
-1. From Add funds, Select From an app — choose from CashApp, Coinbase, or Robinhood.
+1. From **Add funds**, select **From an app** — choose CashApp, Coinbase, or Robinhood.
 2. Select your asset — choose any asset other than Cash.
-3. Select your preferred blockchain network.
-4. Copy the wallet address or scan the QR code to initiate the transfer from your external app to Axal.
+3. Select your blockchain network. **The network must match on both sides** — sending on a
+   network Axal doesn't support, or a different network than the one you selected, can delay or
+   strand your transfer.
+4. Copy the wallet address or scan the QR code to send from your external app.
 
 ## Troubleshooting
 
-- Transfer not showing? Verify the transaction hash by logging into the desktop/browser interface and clicking View on Explorer.
-- Sent on the wrong network? Contact support at hello@getaxal.com with the transaction hash so the team can advise on recovery options.
-- Note: Axal sponsors all gas costs for transactions within the Axal app, not external wallet transactions.
+- **Transfer not showing?** Check the transaction hash by opening the desktop/browser app and
+  clicking **View on Explorer**.
+- **Sent on the wrong network?** Contact support@axal.com with the transaction hash so the team
+  can advise on recovery options.
+- Axal covers gas costs for transactions made within the Axal app. Transfers you send from an
+  external wallet or app use that platform's own fees.

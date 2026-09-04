@@ -18,7 +18,7 @@ export function Footer() {
     <footer className="h-16 w-full border-t text-sm text-foreground">
       <div className="mx-auto flex h-full w-full max-w-[1400px] flex-wrap items-center justify-center gap-4 px-2 py-3 sm:justify-between sm:gap-0 sm:px-4 sm:py-0 lg:px-8">
         <p className="items-center">
-          &copy; 2024{' '}
+          &copy; {new Date().getFullYear()}{' '}
           <Link
             aria-label={Settings.name}
             className="font-semibold"

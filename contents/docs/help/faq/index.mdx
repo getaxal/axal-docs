@@ -1,0 +1,83 @@
+---
+title: FAQ
+description: Frequently asked questions about Axal.
+---
+
+## Frequently Asked Questions
+
+<div className="faq-container">
+  <div className="faq-item">
+    <h3>What is Axal, and how is it different from a traditional savings account?</h3>
+    <p>Axal is a non-custodial, automated savings platform that helps you earn yield on dollars, Bitcoin, and (soon) gold — typically higher than a traditional bank savings rate. Axal automatically routes your funds to vetted lending protocols and rebalances toward the best safe rate, instead of you managing that yourself. See <a href="/docs/how-it-works/axal-vs-savings">Axal vs a traditional savings account</a>.</p>
+  </div>
+
+  <div className="faq-item">
+    <h3>How is the yield (APY) generated?</h3>
+    <p>Your funds are allocated to vetted, overcollateralized DeFi lending protocols like Morpho and Aave, where borrowers pay interest on what they borrow — that interest is your yield. Axal continuously monitors and rebalances your balance to keep it earning the best available safe rate. See <a href="/docs/how-it-works/where-yield-comes-from">Where Axal's yield comes from</a>.</p>
+  </div>
+
+  <div className="faq-item">
+    <h3>Why can this offer a higher rate than my bank?</h3>
+    <p>DeFi lending markets connect lenders and borrowers directly, so less value is taken out along the way compared to a traditional bank. Some protocols also offer temporary bonus incentives to attract deposits — Axal can capture those windows while still applying its normal safety screening.</p>
+  </div>
+
+  <div className="faq-item">
+    <h3>What are the risks?</h3>
+    <p>Because most Axal balances are held in dollar-pegged assets, the main risks aren't everyday price swings — they're technical and structural:</p>
+    <ul>
+      <li><strong>Smart-contract risk</strong> — a bug or exploit in a lending protocol could result in a loss of funds.</li>
+      <li><strong>Stablecoin de-peg risk</strong> — a stablecoin could temporarily trade below its intended $1 value.</li>
+      <li><strong>Market risk</strong> — Bitcoin and gold balances can fall in price.</li>
+      <li><strong>Counterparty risk</strong> — a failure at a third-party provider Axal relies on.</li>
+      <li><strong>Operational risk</strong> — downtime or a bug in Axal's own systems.</li>
+      <li><strong>Regulatory risk</strong> — new rules could affect access to certain features.</li>
+    </ul>
+    <p>See the full breakdown at <a href="/docs/trust-safety/risks">Risks</a>.</p>
+  </div>
+
+  <div className="faq-item">
+    <h3>What is Axal doing to mitigate these risks?</h3>
+    <p>Axal only uses lending protocols that meet a bar for audit history and track record, and doesn't introduce its own unaudited contracts into the flow. Axal continuously monitors position health across every pool it uses and can exit if something looks unsafe. See <a href="/docs/trust-safety/risks">Risks</a> for the full mitigation list.</p>
+  </div>
+
+  <div className="faq-item">
+    <h3>Is yield variable or fixed?</h3>
+    <p>Variable. APY moves with real market lending demand and can go up or down — it is never a fixed, guaranteed rate.</p>
+  </div>
+
+  <div className="faq-item">
+    <h3>Is Axal safe to use?</h3>
+    <p>Axal is non-custodial — your funds sit in your own wallet, not Axal's. Signing is handled inside a Trusted Execution Environment (the same class of technology behind Face ID), so private keys stay isolated even from Axal staff. Axal's systems are also independently audited by Sherlock. See <a href="/docs/trust-safety/is-my-money-safe">Is my money safe?</a></p>
+  </div>
+
+  <div className="faq-item">
+    <h3>Are there any fees for using Axal?</h3>
+    <p>Axal takes 15% of the yield you earn — only when you earn it. No upfront fees, no withdrawal fees, no subscription. See <a href="/docs/how-it-works/fee-structure">Fees</a> for a worked example.</p>
+  </div>
+</div>
+<style>
+  {`
+    .faq-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+    }
+    
+    .faq-item {
+      padding: 1.25rem;
+      border-radius: 8px;
+      background-color: var(--color-background-secondary);
+    }
+    
+    .faq-item h3 {
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+      color: var(--color-text-accent);
+    }
+    
+    .faq-item p {
+      margin: 0;
+    }
+  `}
+</style>

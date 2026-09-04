@@ -1,0 +1,38 @@
+---
+title: Strategy Stack
+description: The protocols and networks Axal currently uses to generate yield.
+---
+
+## Currently live
+
+Axal generates USD yield by lending USDC across vetted protocols on Base:
+
+- **Protocols:** Morpho, Euler
+- **Network:** Base
+- **Strategy:** USDC lending across supported pools on Morpho and Euler, continuously rebalanced
+  toward the best safe rate.
+
+## On the roadmap
+
+The following networks and protocols are planned for a future phase and are **not live today**:
+ETH Mainnet, Polygon, Arbitrum, Stellar, BNB, Solana, Hyperliquid, Aptos, plus Maple. This section
+will move to "Currently live" once shipped — check back for updates rather than treating this list
+as available now.
+
+## How protocols are chosen
+
+- **No principal-asset-risk lending only.** Axal only uses lending markets where your deposit
+  itself isn't the thing at risk of liquidation — you're the lender, not the borrower.
+- Protocols are added only after meeting Axal's safety bar for audit history and track record —
+  see [Where yield comes from](/docs/how-it-works/where-yield-comes-from) for how that
+  evaluation works.
+
+## Security & transparency
+
+- **Non-custodial:** your funds sit in your own Privy smart wallet — see
+  [How your wallet works](/docs/trust-safety/how-your-wallet-works)
+- **Automated, not manual:** gas and chain complexity are handled for you; no crypto experience
+  required
+- **Monitored continuously:** positions are checked on an ongoing basis, not just at deposit time
+- **Transparent:** vault addresses are publicly viewable — see
+  [Contracts & addresses](/docs/advanced/contracts)

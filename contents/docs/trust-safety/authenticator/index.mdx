@@ -1,0 +1,47 @@
+---
+title: Face ID, Passkeys & 2FA
+description: Secure your account with biometrics, a passkey, or an authenticator app.
+tags:
+  - Security
+  - 2FA
+  - Passkeys
+---
+
+Axal supports several ways to add a second layer of security to your account, required for
+sensitive actions like withdrawals and exporting your wallet.
+
+## Your options
+
+- **Face ID / biometrics** — the fastest option on a phone that supports it. Enable it from
+  **Profile → Biometrics**.
+- **Passkey** — a device-based credential that works across your devices without typing a code.
+  Enable it from **Profile → Multi-factor authentication → Passkey**.
+- **Authenticator app** — a standard time-based one-time-passcode (TOTP) app such as Google
+  Authenticator, Authy, or 1Password. Enable it from **Profile → Multi-factor authentication →
+  Authenticator app**.
+
+Any one of these satisfies Axal's MFA requirement — you don't need to set up more than one, though
+you can.
+
+## Why this matters
+
+Withdrawals and wallet exports give complete access to your funds, so Axal requires this extra
+step before completing either. An authenticator-style code is time-limited and generated on your
+device, so it can't be intercepted the way a text message can.
+
+## Setting up an authenticator app
+
+1. Install an authenticator app of your choice (Google Authenticator, Authy, or 1Password all
+   work) from your phone's app store.
+2. In Axal, go to **Profile → Security → Multi-factor authentication** and select **Authenticator
+   app**.
+3. Scan the QR code shown on screen with your authenticator app.
+4. Enter the 6-digit code the app generates to confirm setup.
+
+## Using MFA for a withdrawal or export
+
+When withdrawing or exporting your wallet, you'll be prompted for your current MFA code from
+whichever method you enabled (Face ID, passkey, or authenticator app). Enter it to continue.
+
+**Keep your device secure**, don't share your codes with anyone, and if you lose access to your
+authenticator device, contact support@axal.com to regain access.

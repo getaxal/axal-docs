@@ -13,14 +13,26 @@ const items: StartHereItem[] = [
   {
     icon: '/home-icons/start-earning.svg',
     question: 'How do I start earning?',
-    answer: 'Fund your account and put it to work.',
+    answer: 'Set up your account and make your first deposit.',
     href: '/docs/getting-started/quick-start',
+  },
+  {
+    icon: '/home-icons/how-it-works.svg',
+    question: 'Where does my yield come from?',
+    answer: 'See exactly how your balance earns, in plain terms.',
+    href: '/docs/how-it-works/where-yield-comes-from',
   },
   {
     icon: '/home-icons/safe.svg',
     question: 'Is my money safe?',
-    answer: 'Self-custodial. You control your funds.',
-    href: '/docs/security/audits',
+    answer: "Self-custodial, audited, and honest about what's not insured.",
+    href: '/docs/trust-safety/is-my-money-safe',
+  },
+  {
+    icon: '/home-icons/start-earning.svg',
+    question: 'How do I add money?',
+    answer: 'Bank, card, or an app you already use.',
+    href: '/docs/getting-started/depositing-with-card-bank',
   },
   {
     icon: '/home-icons/money-out.svg',
@@ -29,22 +41,10 @@ const items: StartHereItem[] = [
     href: '/docs/withdrawing/withdrawal',
   },
   {
-    icon: '/home-icons/rewards.svg',
-    question: 'Rewards & referrals',
-    answer: 'Earn extra for inviting friends and hitting savings milestones.',
-    href: '/docs/referrals/overview',
-  },
-  {
     icon: '/home-icons/fees.svg',
     question: 'Are there fees?',
-    answer: 'No deposit or withdrawal fees.',
-    href: '/docs/earning/fee-structure',
-  },
-  {
-    icon: '/home-icons/how-it-works.svg',
-    question: 'How it works',
-    answer: 'Understand the mechanics under the hood.',
-    href: '/docs/advanced/wallet-and-security',
+    answer: 'A simple 15% fee on yield earned — nothing else.',
+    href: '/docs/how-it-works/fee-structure',
   },
 ]
 

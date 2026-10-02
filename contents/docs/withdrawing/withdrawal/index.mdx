@@ -1,41 +1,85 @@
 ---
 title: Withdrawals
-description: Learn how to withdraw your funds from Axal to a bank account or crypto wallet
+description: Learn how to withdraw funds from Axal to a bank account, finance app, or crypto wallet
 tags:
   - How it Works
   - Wallet
   - Withdrawal
   - Bank
   - Crypto
+  - Finance Apps
 ---
 
-This page explains how to move funds out of Axal. You can withdraw directly to a linked bank account or to an external crypto wallet. Multi-factor authentication (MFA) is required to complete any withdrawal.
+This page explains how to move funds out of Axal. You can withdraw to a linked bank account, a finance app such as Coinbase or Robinhood, or an external crypto wallet. Multi-factor authentication (MFA) is required to complete any withdrawal.
 
 ## Withdraw to Bank Account
 
-1. Select the account you would like to withdraw from.
+Bank withdrawals use your available **Cash balance** and require a six-digit code from your authenticator app.
 
-<img src="/Withdrawal/Withdraw_Axal.png" alt="Select account to withdraw from" width="40%" />
+### Choose Your Bank
 
-2. Enter the amount you would like to withdraw from your idle balance.
+1. Tap **Withdraw** on the Home screen.
+2. In **Select asset**, choose **Cash**.
+3. In **Choose withdrawal method**, select **Bank account**.
+4. On **Bank Accounts**, select the bank account where you want to receive the withdrawal. If you need to link another bank, tap **Add an account**.
+5. Tap **Continue**.
 
-<img src="/Withdrawal/Withdraw_Axal-1.png" alt="Enter withdrawal amount" width="40%" />
+<img src="/Withdrawal/bank-withdrawal-method.png" alt="Choose withdrawal method screen with the Bank account option" width="40%" />
 
-<img src="/Withdrawal/Withdraw_Axal-2.png" alt="Enter withdrawal amount confirmation" width="40%" />
+### Enter an Amount and Review
 
-3. Review the transaction details before confirming.
+1. On **Withdraw Cash**, enter the amount you want to withdraw, or tap **Use maximum** to use the available balance shown.
+2. Check the selected bank account at the bottom of the screen. Use the dropdown if you need to change it.
+3. Tap **Continue**.
+4. On **Review transaction**, check the withdrawal amount, **Cash Balance** funding source, destination bank account, **Fees**, and **Processing time**.
 
-<img src="/Withdrawal/Withdraw_Axal-3.png" alt="Review transaction" width="40%" />
+Axal charges no withdrawal fee. Allow **up to 5 business days**, as shown on the review screen, for the transfer to reach your bank.
 
-<img src="/Withdrawal/Withdraw_Axal-4.png" alt="Review transaction details" width="40%" />
+### Confirm with Your Authenticator
 
-4. Enter your MFA code to confirm the withdrawal.
+1. Tap **Validate with TOTP** on the review screen.
+2. Open your authenticator app and find the code for your Axal account.
+3. Return to Axal and enter the six-digit code in **Enter your code**, or tap **Paste** if you copied it. If your phone asks for permission to paste, allow it to insert the code.
+4. After successful verification, Axal confirms that the amount **is on its way to your bank account**.
+5. Tap **Done** to return to the app.
 
-<img src="/Withdrawal/MFA_Authenticator.png" alt="MFA authentication prompt" width="40%" />
+<img src="/Withdrawal/bank-withdrawal-confirmation.png" alt="Confirmation that a withdrawal is on its way to the bank account, with a Done button" width="40%" />
 
-<img src="/Withdrawal/MFA_Authenticator-1.png" alt="Enter MFA code" width="40%" />
+The confirmation means your withdrawal has been submitted; bank processing still needs to complete.
 
-<img src="/Withdrawal/MFA_Authenticator-2.png" alt="MFA confirmation" width="40%" />
+## Withdraw to a Finance App
+
+You can send funds from your available **Cash balance** to **Coinbase** or **Robinhood**. The steps below cover the Axal flow; sign-in and confirmation screens in the receiving app may differ.
+
+### Choose an App
+
+1. Tap **Withdraw** on the Home screen.
+2. In **Select asset**, choose **Cash**.
+3. In **Choose withdrawal method**, tap **Finance apps**.
+4. In **Select app**, choose **Coinbase** or **Robinhood**.
+
+<img src="/Withdrawal/finance-withdrawal-apps.png" alt="Select app screen with Coinbase and Robinhood withdrawal destinations" width="40%" />
+
+### Enter an Amount and Review
+
+1. On **Send Cash**, enter the amount you want to send, or tap **Use maximum** to use the available balance shown.
+2. Check the receiving app at the bottom of the screen. Use the dropdown if you need to change it.
+3. Tap **Continue**.
+4. On **Review transaction**, check the amount, **Cash Balance** funding source, receiving app, **Fees**, and **Processing time**.
+
+Axal charges no withdrawal fee. Check the processing estimate shown for your transaction. In the Robinhood example below, **Fees** shows **None** and **Processing time** shows **Instant**.
+
+<img src="/Withdrawal/finance-withdrawal-review.png" alt="Review transaction screen for sending Cash to Robinhood, showing no fees and instant processing" width="40%" />
+
+### Verify and Complete in the Receiving App
+
+1. Tap **Validate with TOTP**.
+2. Open your authenticator app and find the code for your Axal account.
+3. Return to Axal and enter the six-digit code, or tap **Paste** if you copied it. Allow pasting if your phone asks.
+4. After verification, continue to the selected app or its website. Sign in and follow its prompts to complete the transfer.
+5. Check the receiving app for confirmation that the transfer has completed.
+
+For Robinhood, stop screen recording or screen sharing if its security screen asks you to do so, then continue in Robinhood.
 
 ## Withdraw to Crypto Wallet
 
@@ -69,6 +113,6 @@ This page explains how to move funds out of Axal. You can withdraw directly to a
 
 ## Troubleshooting
 
-- Withdrawal not showing? Allow up to 3–5 business days for bank transfers to settle.
+- Withdrawal not showing? Allow up to 5 business days for bank withdrawals to reach your account, and check the processing estimate on your transaction review screen.
 - Wrong network? Contact support at hello@getaxal.com with the transaction hash so the team can advise on recovery options.
 - Note: Axal sponsors all gas costs for transactions within the Axal app, not external wallet transactions.

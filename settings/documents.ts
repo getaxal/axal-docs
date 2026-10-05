@@ -18,6 +18,7 @@ export const Documents: Paths[] = [
     noLink: true,
     items: [
       { title: 'Quick Start', href: '/quick-start' },
+      { title: 'How Axal Works', href: '/how-axal-works' },
       { title: 'Depositing with Card or Bank', href: '/depositing-with-card-bank' },
       { title: 'Depositing from the App', href: '/depositing-from-app' },
       { title: 'Depositing USDC', href: '/depositing-crypto' },

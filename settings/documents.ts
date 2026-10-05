@@ -18,9 +18,9 @@ export const Documents: Paths[] = [
     noLink: true,
     items: [
       { title: 'Quick Start', href: '/quick-start' },
-      { title: 'Depositing Crypto', href: '/depositing-crypto' },
       { title: 'Depositing with Card or Bank', href: '/depositing-with-card-bank' },
       { title: 'Depositing from the App', href: '/depositing-from-app' },
+      { title: 'Depositing USDC', href: '/depositing-crypto' },
     ],
   },
   { spacer: true },

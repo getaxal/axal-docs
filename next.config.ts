@@ -60,6 +60,9 @@ const legacyRedirects: Record<string, string> = {
   '/terms/terms': '/docs/legal/terms-of-service',
   '/terms/terms-of-service': '/docs/legal/terms-of-service',
   '/terms/privacy-policy': '/docs/legal/privacy-policy',
+
+  // Pages moved within the current docs.
+  '/docs/getting-started/how-axal-works': '/docs/learn/how-axal-works',
 }
 
 const nextConfig: NextConfig = {

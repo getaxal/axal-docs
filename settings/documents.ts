@@ -19,7 +19,6 @@ export const Documents: Paths[] = [
     noLink: true,
     items: [
       { title: 'Quick Start', href: '/quick-start' },
-      { title: 'How Axal Works', href: '/how-axal-works' },
       { title: 'Depositing with Card or Bank', href: '/depositing-with-card-bank' },
       { title: 'Depositing from the App', href: '/depositing-from-app' },
       { title: 'Depositing USDC', href: '/depositing-crypto' },
@@ -51,13 +50,12 @@ export const Documents: Paths[] = [
     icon: LuGraduationCap,
     noLink: true,
     items: [
+      { title: 'How Axal Works', href: '/how-axal-works' },
       { title: 'Is Axal Safe?', href: '/is-axal-safe' },
       { title: 'Axal Cash', href: '/axal-cash' },
       { title: 'Cash, Bitcoin and Gold in One App', href: '/cash-bitcoin-gold' },
       { title: 'Axal vs. High-Yield Savings', href: '/axal-vs-high-yield-savings' },
-      { title: 'Axal vs. Wealthfront', href: '/axal-vs-wealthfront' },
       { title: 'Alternatives to High-Yield Savings', href: '/alternatives-to-high-yield-savings' },
-      { title: 'Where to Keep Your Emergency Fund', href: '/emergency-fund' },
       { title: 'Moving Savings to Higher Yield', href: '/move-savings-to-higher-yield' },
     ],
   },

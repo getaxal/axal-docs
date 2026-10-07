@@ -5,12 +5,12 @@ export const siteicondark = '/Axal-Primary-White_Thicker-1.png'
 export const gtm = 'GTM-XXXXXXX'
 export const gtmconnected = false // set true once a real GTM ID replaces the placeholder
 
-export const sitename = 'Documentation'
+export const sitename = 'Axal Docs'
 export const description =
   'Help center and documentation for Axal, a non-custodial automated stablecoin savings product.'
 export const keywords = ['Axal', 'stablecoin', 'savings', 'crypto', 'documentation', 'help center']
-export const urlimage = '/images/og-image.png'
-export const imagealt = 'Axal Documentation'
+export const urlimage = '/thumbnail_01.jpg'
+export const imagealt = 'Axal — Build wealth. Earn more.'
 export const twitterhandle = '@getaxal'
 
 export const companyname = 'Axal'

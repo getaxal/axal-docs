@@ -69,8 +69,8 @@ export const Settings: AppSettings = {
     images: [
       {
         url: urlimage,
-        width: 1200,
-        height: 630,
+        width: 3840,
+        height: 2160,
         alt: imagealt,
       },
     ],

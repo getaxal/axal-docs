@@ -1,3 +1,4 @@
+import { AutoplayVideo } from '@/components/markdown/autoplay-video'
 import {
   Accordion,
   AccordionContent,
@@ -36,6 +37,7 @@ const questions = [
 export function PopularQuestions() {
   return (
     <section className="mx-auto w-full max-w-6xl py-8">
+      <AutoplayVideo className="mb-8 w-full rounded-[12px]" src="/quick-start/faq-yield.mp4" />
       <h2 className="mb-6 text-2xl font-semibold text-ink">Popular questions</h2>
       <Accordion collapsible type="single">
         {questions.map((item) => (

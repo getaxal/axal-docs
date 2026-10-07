@@ -1,3 +1,4 @@
+import { AutoplayVideo } from '@/components/markdown/autoplay-video'
 import { Card, CardGrid } from '@/components/markdown/card'
 import { FileTree } from '@/components/markdown/filetree'
 import { File, Folder } from '@/components/markdown/filetree/component'
@@ -10,6 +11,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 
 export const components = {
   a: Route,
+  AutoplayVideo,
   Card,
   CardGrid,
   FileTree,

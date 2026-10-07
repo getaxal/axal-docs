@@ -1,265 +1,64 @@
 ---
-title: Risk Overview
-description: A clear explanation of the risks associated with using our yield strategies.
+title: Risks
+description: The real risks of earning with Axal, and how Axal works to mitigate them.
 ---
 
-## Risk Overview
+Axal earns yield by lending your dollars through overcollateralized stablecoin markets. That is a different risk profile from a bank savings account. This page explains what can go wrong, what Axal does about it, and how that differs from conventional products. For the full product walkthrough, see [How Axal Works](/docs/learn/how-axal-works). For a shorter safety summary, see [Is Axal Safe?](/docs/learn/is-axal-safe).
 
-Before using our yield strategies, it's important to understand the potential risks:
+## How yield is generated (and why that matters for risk)
 
-- **Smart‑Contract Risk**: Code vulnerabilities in any integrated protocol.
-- **Market Risk**: Price swings that devalue collateral or vault tokens.
-- **Liquidation Risk**: Leveraged legs can be forcibly closed if collateral falls.
-- **Stablecoin De‑Peg**: Over‑collateralised stables may not redeem 1:1 in a bank run.
-- **Counterparty Risk**: Failure of off‑chain or oracle services that feed data on‑chain.
-- **Operational Risk**: Downtime in our rebalancing bots or governance failures.
+When you deposit dollars, Axal converts them to USDC (digital dollars issued by Circle) and lends them in established overcollateralized lending markets such as Morpho and Euler. Borrowers must post more collateral than they borrow. If they fail to repay or their collateral falls below safe levels, that collateral is liquidated and used to protect lenders.
 
-Always size positions according to personal risk tolerance. Past performance ≠ future returns.
+Your principal is designed to be protected by those collateral rules — not by FDIC insurance, and not by Axal holding your money. Axal is self-custodial: you control the keys to your funds.
 
-## Enhanced Risk Disclosure
+## Key risks
 
-Below is a more granular view of the risks already listed, plus the specific ways Axal attempts to mitigate them. Use this to decide whether a given tier matches your personal risk budget.
+### Software / smart-contract risk
 
-<div className="risk-table">
-	<table>
-		<thead>
-			<tr>
-				<th>Risk Category</th>
-				<th>Description</th>
-				<th>Who/What is Exposed?</th>
-				<th>Mitigation at Axal</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td className="risk-category">Smart‑Contract & Protocol Risk</td>
-				<td>
-					Bugs or economic exploits in any integrated protocol (Aave, Morpho,
-					Kamino, HyperEVM, Felix).
-				</td>
-				<td>All tiers (severity rises with Aggressive).</td>
-				<td>
-					‑ Curated where protocol requires at least two independent audits per
-					contract;
-				</td>
-			</tr>
-			<tr>
-				<td className="risk-category">Third‑Party Integration Risk</td>
-				<td>
-					Failures in routers, bridges, relayers, or any other external services
-					our strategies tap into.
-				</td>
-				<td>Primarily Balanced & Aggressive.</td>
-				<td>
-					‑ Prefer "battle‑tested" adapters;
-					<br />‑ Circuit‑breaker that pauses deposits if an adapter reverts
-					beyond a set threshold.
-				</td>
-			</tr>
-			<tr>
-				<td className="risk-category">Counterparty & Custody Risk</td>
-				<td>
-					Losses arising from another entity having control over user funds or
-					recovery keys.
-				</td>
-				<td>Minimal for all tiers (Axal is non‑custodial).</td>
-				<td>
-					‑ Privy self‑custodial wallets;
-					<br />‑ Session keys limited in scope/time;
-					<br />‑ No Axal or relayer signing rights;
-					<br />‑ 3‑of‑5 Emergency Council can only pause contracts, never move
-					user funds.
-				</td>
-			</tr>
-			<tr>
-				<td className="risk-category">Market & Liquidity Risk</td>
-				<td>
-					Volatility or thin liquidity may drive collateral prices below safety
-					thresholds, causing liquidations or impermanent loss.
-				</td>
-				<td>
-					Balanced & Aggressive (Conservative protected by blue‑chip and
-					stables).
-				</td>
-				<td>
-					‑ Auto‑Deleverage if LTV > 70%;
-					<br />‑ Multi‑stable distribution (USDC/USDT/DAI) in Conservative
-					vaults.
-				</td>
-			</tr>
-			<tr>
-				<td className="risk-category">Stablecoin De‑Peg Risk</td>
-				<td>
-					Over‑collateralised stables (feUSD, USDXL) lose their dollar peg
-					during a bank run.
-				</td>
-				<td>Balanced.</td>
-				<td>
-					‑ Hard caps per stablecoin;
-					<br />‑ Peg‑watch oracle that forces a strategy pause if deviation >
-					3%.
-				</td>
-			</tr>
-			<tr>
-				<td className="risk-category">Oracle/Data Risk</td>
-				<td>
-					Bad price feeds can trigger false liquidations or erroneous
-					rebalances.
-				</td>
-				<td>All tiers.</td>
-				<td>
-					‑ Multiple oracle sources (Chainlink, Pyth, on‑chain TWAP) with
-					medianisation.
-				</td>
-			</tr>
-			<tr>
-				<td className="risk-category">Execution & Automation Risk</td>
-				<td>
-					Downtime in our rebalancer or MEV front‑running can widen slippage.
-				</td>
-				<td>Mostly Aggressive.</td>
-				<td>
-					‑ Redundant keeper network in three regions;
-					<br />‑ Transactions sent with MEV‑blocker relay.
-				</td>
-			</tr>
-			<tr>
-				<td className="risk-category">Regulatory/Policy Risk</td>
-				<td>
-					Changing rules around DeFi, leverage, or stablecoins could affect
-					access or taxation.
-				</td>
-				<td>All tiers.</td>
-				<td>
-					‑ Geofencing where legally required;
-					<br />‑ Regular counsel review of new regulations.
-				</td>
-			</tr>
-			<tr>
-				<td className="risk-category">Systemic / Chain Risk</td>
-				<td>
-					L1/L2 outage, consensus failure, or cross‑chain bridge hack causes
-					widespread contagion.
-				</td>
-				<td>All tiers.</td>
-				<td>
-					‑ Diversified chain exposure;
-					<br />‑ Rapid exit scripts for conservative assets;
-				</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
+A bug or exploit in a lending market Axal uses could cause losses. A failure in liquidation logic could also leave lenders exposed if borrowers stop repaying or do not top up collateral in time.
 
-## Risk‑by‑Tier Heat Map
+**What Axal does:** Only allocate to blue-chip markets with significant liquidity, multiple independent audits, and meaningful institutional usage. Diversify across markets so a problem in one does not take down the whole allocation. Continuously monitor rates, liquidity, and other risk signals, and reallocate when something looks unsafe.
 
-<div className="heatmap-table">
-	<table>
-		<thead>
-			<tr>
-				<th>Tier</th>
-				<th>Smart‑Contract</th>
-				<th>Counter‑party</th>
-				<th>Market/Price</th>
-				<th>Liquidation</th>
-				<th>Oracle</th>
-				<th>Systemic</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td className="tier conservative">Conservative</td>
-				<td className="risk minimal">🟢 Minimal</td>
-				<td className="risk minimal">🟢 Minimal</td>
-				<td className="risk minimal">🟢 Minimal</td>
-				<td className="risk minimal">🟢 Minimal</td>
-				<td className="risk minimal">🟢 Minimal</td>
-				<td className="risk minimal">🟢 Minimal</td>
-			</tr>
-			<tr>
-				<td className="tier balanced">Balanced</td>
-				<td className="risk medium">🟡 Medium</td>
-				<td className="risk minimal">🟢 Minimal</td>
-				<td className="risk medium">🟡 Medium</td>
-				<td className="risk medium">🟡 Medium</td>
-				<td className="risk medium">🟡 Medium</td>
-				<td className="risk minimal">🟢 Minimal</td>
-			</tr>
-			<tr>
-				<td className="tier aggressive">Aggressive</td>
-				<td className="risk high">🔴 High</td>
-				<td className="risk minimal">🟢 Minimal</td>
-				<td className="risk high">🔴 High</td>
-				<td className="risk high">🔴 High</td>
-				<td className="risk high">🔴 High</td>
-				<td className="risk minimal">🟢 Minimal</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
+### Dollar-peg risk
 
-## How You Can Mitigate Risk Personally
+USDC is designed to stay at $1, but in a crisis it can temporarily trade below that. Because Axal lends dollars only via USDC, a de-peg would affect balances denominated in USDC.
 
-- **Size sensibly**: Never allocate funds you cannot afford to lose.
-- **Diversify tiers**: Split capital across Conservative, Balanced, and Aggressive instead of going "all‑in" on one.
-- **Review session keys**: Revoke or shorten session‑key duration if you won't be actively monitoring.
-- **Monitor dashboards**: Enable push or email alerts for LTV and peg deviations (coming soon).
-- **Stay informed**: Follow our Transparency Hub and Discord for audit reports, incident updates, and governance changes.
+**What Axal does:** Stick to USDC issued by Circle, a publicly traded company, rather than less-proven “dollar yield” products that may not actually hold dollars under the hood. Avoid mixing in other asset risk for the cash product.
 
-<style>
-	{`
-    .risk-table table, .heatmap-table table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 1.5rem 0;
-      font-size: 0.9rem;
-    }
-    
-    .risk-table th, .risk-table td, .heatmap-table th, .heatmap-table td {
-      padding: 0.75rem 0.75rem;
-      border: 1px solid var(--color-border);
-    }
-    
-    .risk-table th, .heatmap-table th {
-      background-color: var(--color-background-secondary);
-      font-weight: 600;
-      text-align: left;
-    }
-    
-    .risk-category {
-      font-weight: 600;
-    }
-    
-    .tier {
-      font-weight: 600;
-    }
-    
-    .conservative {
-      color: #2e7d32;
-    }
-    
-    .balanced {
-      color: #f57c00;
-    }
-    
-    .aggressive {
-      color: #d32f2f;
-    }
-    
-    .risk {
-      text-align: center;
-    }
-    
-    .minimal {
-      background-color: rgba(46, 125, 50, 0.1);
-    }
-    
-    .medium {
-      background-color: rgba(245, 124, 0, 0.1);
-    }
-    
-    .high {
-      background-color: rgba(211, 47, 47, 0.1);
-    }
-  `}
-</style>
+### Market stress and liquidity risk
+
+In extreme conditions, withdrawals can be slower, markets can become thin, or collateral prices can move faster than liquidations can keep up. Rates are also dynamic: supply and demand change the APY you see over time.
+
+**What Axal does:** Prefer deep, liquid markets so withdrawals can stay available. Use conservative collateral and LTV standards so liquidations have room to work during sharp moves. Run a rebalancer that moves funds based on rates, liquidity, and risk — with scoped permissions on what it can and cannot do.
+
+### No FDIC / not a bank
+
+Axal is a financial technology company, not a bank. Balances are not FDIC insured. Traditional bank “runs” and deposit freezes do not apply in the same way, because you always control your wallet and can move funds without Axal’s permission — but that also means there is no government deposit guarantee.
+
+**What Axal does:** Keep the product self-custodial by design (via Privy). No lockups or minimums: deposit or withdraw when you want, including to external bank accounts. For a plain-language comparison, see [Is Axal Safe?](/docs/learn/is-axal-safe).
+
+### Regulatory risk
+
+Rules around stablecoins, DeFi, and consumer yield products can change. New requirements could affect how the product works, who can use it, or how it is taxed.
+
+**What Axal does:** Follow applicable law, including geofencing where required, and monitor regulatory developments. USDC itself sits under a clearer U.S. federal framework than many earlier crypto cash products.
+
+## What Axal is not exposed to (for cash yield)
+
+Relative to older multi-tier or leveraged strategy designs, Axal’s cash product is intentionally narrower:
+
+- **No leveraged “aggressive” strategy tiers** for users to pick between.
+- **No lending of non-dollar assets** for the cash balance — dollars only, via USDC.
+- **No custodial hold** where Axal going offline locks your money; you retain control of the keys.
+
+Borrowers in the underlying markets may use volatile collateral (for example Bitcoin), but those loans are overcollateralized and liquidated by market rules when ratios break. That borrower-side volatility is part of why lender protection is designed the way it is — see the example in [How Axal Works](/docs/learn/how-axal-works).
+
+## How you can manage risk personally
+
+- Only deposit money you can afford to put at risk for a higher, variable yield.
+- Understand that APY moves with the market; past rates do not guarantee future returns.
+- Prefer starting small if you are new, then scale as you get comfortable with deposits and withdrawals.
+- Keep account recovery options up to date so you do not lose access to a self-custodial wallet.
+- Read the formal [risk disclosures](/docs/legal/risk-disclosures) before using Axal.
+
+If you have questions, reach out via [Support](/) on the docs home page, or contact the team at [ash@axal.com](mailto:ash@axal.com).

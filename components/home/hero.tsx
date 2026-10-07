@@ -3,7 +3,7 @@ import { Search } from '@/components/navigation/search'
 
 export function Hero() {
   return (
-    <section className="mx-auto grid w-full max-w-6xl grid-cols-1 items-start gap-12 pb-16 md:grid-cols-2 md:pb-24">
+    <section className="mx-auto grid w-full max-w-6xl grid-cols-1 items-start gap-12 pb-4 md:grid-cols-2 md:pb-6">
       <div className="flex flex-col items-start gap-5">
         <span className="text-sm font-semibold tracking-wide text-accent uppercase">
           Axal Help Center
@@ -15,7 +15,7 @@ export function Hero() {
           Search our help center or browse guides on deposits, earning, withdrawals, and
           security.
         </p>
-        <Search placeholder="Try 'how do I withdraw'" variant="hero" />
+        <Search placeholder="Try 'how do I deposit'" variant="hero" />
       </div>
 
       <BalanceCard />

@@ -11,16 +11,16 @@ interface StartHereItem {
 
 const items: StartHereItem[] = [
   {
+    icon: '/home-icons/how-it-works.svg',
+    question: 'How it works',
+    answer: 'Understand the mechanics under the hood.',
+    href: '/docs/learn/how-axal-works',
+  },
+  {
     icon: '/home-icons/start-earning.svg',
     question: 'How do I start earning?',
     answer: 'Fund your account and put it to work.',
     href: '/docs/getting-started/quick-start',
-  },
-  {
-    icon: '/home-icons/safe.svg',
-    question: 'Is my money safe?',
-    answer: 'Self-custodial. You control your funds.',
-    href: '/docs/security/audits',
   },
   {
     icon: '/home-icons/money-out.svg',
@@ -34,23 +34,11 @@ const items: StartHereItem[] = [
     answer: 'Earn extra for inviting friends and hitting savings milestones.',
     href: '/docs/referrals/overview',
   },
-  {
-    icon: '/home-icons/fees.svg',
-    question: 'Are there fees?',
-    answer: 'No deposit or withdrawal fees.',
-    href: '/docs/earning/fee-structure',
-  },
-  {
-    icon: '/home-icons/how-it-works.svg',
-    question: 'How it works',
-    answer: 'Understand the mechanics under the hood.',
-    href: '/docs/advanced/wallet-and-security',
-  },
 ]
 
 export function StartHere() {
   return (
-    <section className="mx-auto w-full max-w-6xl py-8">
+    <section className="mx-auto w-full max-w-6xl pt-2 pb-8">
       <h2 className="mb-6 text-2xl font-semibold text-ink">Start here</h2>
       <div className="grid grid-cols-1 gap-9 sm:grid-cols-2">
         {items.map((item) => (

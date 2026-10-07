@@ -3,7 +3,7 @@ export const siteicon = '/Axal-Primary-Black_Thicker.png'
 export const siteicondark = '/Axal-Primary-White_Thicker-1.png'
 
 export const gtm = 'GTM-XXXXXXX'
-export const gtmconnected = true
+export const gtmconnected = false // set true once a real GTM ID replaces the placeholder
 
 export const sitename = 'Documentation'
 export const description =
